@@ -1,0 +1,86 @@
+---
+import '@mdi/font/css/materialdesignicons.min.css';
+const { release } = Astro.props;
+---
+
+<article class="release">
+  <div class="columns">
+    <div class="column is-two-fifths">
+      <figure class="image is-square">
+        <img src={release.coverArt} alt={`${release.title} cover art`} />
+      </figure>
+    </div>
+    <div
+      class="column is-flex is-flex-direction-column is-justify-content-space-around"
+    >
+      <hgroup>
+        <h3 class="subtitle">{release.artist}</h3>
+        <h4 class="title">{release.title}</h4>
+      </hgroup>
+      <div class="streaming-list">
+        <p class="has-text-weight-light is-family-secondary">Listen on:</p>
+        <ul>
+          <li>
+            <a
+              href={release.streaming.ytmusic}
+              target="_blank"
+              rel="norefferer noopener"
+              title={`Listen "${release.title}" on YouTube Music`}
+            >
+              <span class="icon-text">
+                <span class="icon">
+                  <i class="mdi mdi-youtube mdi-24px"></i>
+                </span>
+                <span>YouTube Music</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href={release.streaming.spotify}
+              target="_blank"
+              rel="norefferer noopener"
+              title={`Listen "${release.title}" on Spotify`}
+            >
+            <span class="icon-text">
+              <span class="icon">
+                <i class="mdi mdi-spotify mdi-24px"></i>
+              </span>
+              <span>Spotify</span>
+            </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href={release.streaming.appleMusic}
+              target="_blank"
+              rel="norefferer noopener"
+              title={`Listen "${release.title}" on Apple Music`}
+            >
+            <span class="icon-text">
+              <span class="icon">
+                <i class="mdi mdi-music mdi-24px"></i>
+              </span>
+              <span>Apple Music</span>
+            </span>
+          </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+<style>
+  .release {
+    padding: 20px 0;
+  }
+  
+  .streaming-list {
+    margin-top: 20px;
+  }
+
+  .streaming-list ul li {
+    margin: 5px 0;
+  }
+</style>

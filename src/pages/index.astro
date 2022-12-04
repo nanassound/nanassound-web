@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ReleaseBox from "../components/ReleaseBox.astro";
+
+const releases = [
+  {
+    title: "A New Life",
+    artist: "Asep Bagja",
+    coverArt: "/img/a-new-life.jpg",
+    streaming: {
+      spotify:
+        "https://open.spotify.com/album/5b16ZFMPa21KaQo35thX6f?si=RLSWl1_4SZCADcDFfJzbNw",
+      ytmusic:
+        "https://music.youtube.com/playlist?list=OLAK5uy_nZvBsFixdX7X9yuxjBy7a31GhOMQ3aH3M&feature=share",
+      appleMusic:
+        "https://music.apple.com/ee/album/a-new-life-single/1650494486",
+    },
+    releaseDate: "2022-01-12",
+  },
+  {
+    title: "People Just Want Peace",
+    artist: "Asep Bagja",
+    coverArt: "/img/people-just-want-peace.jpg",
+    streaming: {
+      spotify:
+        "https://open.spotify.com/album/2k7dErolqyRNO6JxlkTkke?si=DF9bCph-Q-aE9CU-lbpY0A",
+      ytmusic:
+        "https://music.youtube.com/playlist?list=OLAK5uy_k0LaLQSJhxc_bbMVTfmdFqsL-tEf5Ll2k&feature=share",
+      appleMusic:
+        "https://music.apple.com/ee/album/people-just-want-peace-single/1650893197",
+    },
+    releaseDate: "2022-03-21",
+  },
+  {
+    title: "The Enlightening Moment",
+    artist: "Asep Bagja",
+    coverArt: "/img/the-enlightening-moment.jpg",
+    streaming: {
+      spotify:
+        "https://open.spotify.com/album/6vVX3g1p1Q1K0py6kXAM41?si=WQaBypJ0RS-tzz76IRz9yg",
+      ytmusic:
+        "https://music.youtube.com/playlist?list=OLAK5uy_kSSHqVHLlpTB0uiRbBLrWDzslMZIdhY8s&feature=share",
+      appleMusic:
+        "https://music.apple.com/ee/album/the-enlightening-moment-ep/1650743218",
+    },
+    releaseDate: "2022-05-24",
+  },
+  {
+    title: "Minimalistlik",
+    artist: "Asep Bagja",
+    coverArt: "/img/minimalistlik.jpg",
+    streaming: {
+      spotify:
+        "https://open.spotify.com/album/37FSj03ms2ZcB9crH1EVXe?si=bF8WLw8kQA-jclSzDVarAQ",
+      ytmusic:
+        "https://music.youtube.com/playlist?list=OLAK5uy_n7hRRkAiZ5U2-PvJSK6WzXmaky424aGlc&feature=share",
+      appleMusic:
+        "https://music.apple.com/ee/album/minimalistlik-single/1650740772",
+    },
+    releaseDate: "2022-08-08",
+  },
+];
+---
+
+<Layout title="Nanas Sound">
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero is-large has-background-light mt-3">
+      <div class="hero-body">
+        <p class="title is-size-1 is-size-5-mobile has-text-centered">
+          Sound shaping stories
+        </p>
+      </div>
+    </section>
+    <!-- end of hero -->
+
+    <section class="section">
+      <div class="columns">
+        <div class="column is-two-thirds">
+          <h2 class="is-size-4 has-text-weight-semibold">Latest releases</h2>
+          {releases.map((release) => <ReleaseBox release={release} />)}
+        </div>
+        <div class="column">
+          <h2 class="is-size-4 has-text-weight-semibold">About me</h2>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
