@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ReleaseBox from "../components/ReleaseBox.astro";
+import AboutMeBox from "../components/AboutMeBox.astro";
 
 const releases = [
   {
@@ -81,7 +82,7 @@ const releases = [
           {releases.map((release) => <ReleaseBox release={release} />)}
         </div>
         <div class="column">
-          <h2 class="is-size-4 has-text-weight-semibold">About me</h2>
+          <AboutMeBox />
         </div>
       </div>
     </section>
