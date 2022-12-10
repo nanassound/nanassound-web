@@ -4,9 +4,6 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
-import vercel from "@astrojs/vercel/serverless";
-
-// https://astro.build/config
 export default defineConfig({
   vite: {
     ssr: {
@@ -19,6 +16,4 @@ export default defineConfig({
   integrations: [mdx({
     drafts: true
   })],
-  output: "server",
-  adapter: vercel()
 });
