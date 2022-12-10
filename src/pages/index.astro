@@ -16,7 +16,7 @@ const releases = [
       appleMusic:
         "https://music.apple.com/ee/album/a-new-life-single/1650494486",
     },
-    releaseDate: "2022-01-12",
+    releaseYear: "2022",
   },
   {
     title: "People Just Want Peace",
@@ -30,7 +30,7 @@ const releases = [
       appleMusic:
         "https://music.apple.com/ee/album/people-just-want-peace-single/1650893197",
     },
-    releaseDate: "2022-03-21",
+    releaseYear: "2022",
   },
   {
     title: "The Enlightening Moment",
@@ -44,7 +44,7 @@ const releases = [
       appleMusic:
         "https://music.apple.com/ee/album/the-enlightening-moment-ep/1650743218",
     },
-    releaseDate: "2022-05-24",
+    releaseYear: "2022",
   },
   {
     title: "Minimalistlik",
@@ -58,7 +58,7 @@ const releases = [
       appleMusic:
         "https://music.apple.com/ee/album/minimalistlik-single/1650740772",
     },
-    releaseDate: "2022-08-08",
+    releaseYear: "2022",
   },
 ];
 ---
@@ -66,11 +66,11 @@ const releases = [
 <Layout title="Nanas Sound">
   <main class="container">
     <!-- Hero -->
-    <section class="hero is-large has-background-light mt-3">
+    <section class="hero is-large mt-3">
       <div class="hero-body">
-        <p class="title is-size-1 is-size-5-mobile has-text-centered">
+        <h1 class="title is-size-1 is-size-5-mobile has-text-white">
           Sound shaping stories
-        </p>
+        </h1>
       </div>
     </section>
     <!-- end of hero -->
@@ -78,7 +78,7 @@ const releases = [
     <section class="section">
       <div class="columns">
         <div class="column is-two-thirds">
-          <h2 class="is-size-4 has-text-weight-semibold">Latest releases</h2>
+          <h2 class="is-size-4 has-text-weight-semibold">Releases</h2>
           {releases.map((release) => <ReleaseBox release={release} />)}
         </div>
         <div class="column">
@@ -88,3 +88,15 @@ const releases = [
     </section>
   </main>
 </Layout>
+
+<style>
+  section.hero {
+    background: url('/img/hero-1.jpg') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .hero-body h1 {
+    font-family: 'Rubik', sans-serif;
+  }
+</style>

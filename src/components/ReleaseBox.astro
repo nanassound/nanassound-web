@@ -16,6 +16,7 @@ const { release } = Astro.props;
       <hgroup>
         <h3 class="subtitle">{release.artist}</h3>
         <h4 class="title">{release.title}</h4>
+        <h5 class="subtitle is-size-6">{release.releaseYear}</h5>
       </hgroup>
       <div class="streaming-list">
         <p class="has-text-weight-light is-family-secondary">Listen on:</p>
@@ -27,7 +28,7 @@ const { release } = Astro.props;
               rel="norefferer noopener"
               title={`Listen "${release.title}" on YouTube Music`}
             >
-              <span class="icon-text">
+              <span class="icon-text has-text-weight-semibold">
                 <span class="icon">
                   <i class="mdi mdi-youtube mdi-24px"></i>
                 </span>
@@ -42,7 +43,7 @@ const { release } = Astro.props;
               rel="norefferer noopener"
               title={`Listen "${release.title}" on Spotify`}
             >
-            <span class="icon-text">
+            <span class="icon-text has-text-weight-semibold">
               <span class="icon">
                 <i class="mdi mdi-spotify mdi-24px"></i>
               </span>
@@ -57,7 +58,7 @@ const { release } = Astro.props;
               rel="norefferer noopener"
               title={`Listen "${release.title}" on Apple Music`}
             >
-            <span class="icon-text">
+            <span class="icon-text has-text-weight-semibold">
               <span class="icon">
                 <i class="mdi mdi-music mdi-24px"></i>
               </span>
@@ -82,5 +83,9 @@ const { release } = Astro.props;
 
   .streaming-list ul li {
     margin: 5px 0;
+  }
+
+  h4.title {
+    font-family: 'Fredoka One', cursive;
   }
 </style>
