@@ -79,7 +79,23 @@ const releases = [
     <section class="section">
       <div class="columns">
         <div class="column is-two-thirds">
+          <h2 class="is-size-4 has-text-weight-semibold">Music library</h2>
+          <article class="music-library pb-5 mt-1 mb-5">
+            <p>
+              Visit and buy my music licence for your video, film, and video
+              games project on:
+            </p>
+            <p>
+              <a
+                href="https://www.pond5.com/artist/nanassound?ref=nanassound"
+                class="button is-warning is-medium"
+                target="_blank"
+                rel="norefferer noopener"
+                title="Visit Nanas Sound's page in Pond5">Pond5</a>
+            </p>
+          </article>
           <h2 class="is-size-4 has-text-weight-semibold">Releases</h2>
+          <p class="pb-3 mt-1">Singles and albums that I release on streaming platforms.</p>
           {releases.map((release) => <ReleaseBox release={release} />)}
         </div>
         <div class="column">
@@ -92,12 +108,17 @@ const releases = [
 
 <style>
   section.hero {
-    background: url('/img/hero-2.png') center;
+    background: url("/img/hero-2.png") center;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
-  .hero-body h1, h2 {
-    font-family: 'Roboto', sans-serif;
+  .hero-body h1,
+  h2 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  article.music-library p {
+    padding-bottom: 1rem;
   }
 </style>
