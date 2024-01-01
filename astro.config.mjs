@@ -8,11 +8,6 @@ import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    ssr: {
-      noExternal: ["bulma"]
-    }
-  },
   markdown: {
     drafts: true
   },
