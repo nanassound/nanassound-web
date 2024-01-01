@@ -1,124 +1,43 @@
 ---
 import "@fontsource/roboto";
 import Layout from "../layouts/Layout.astro";
-import ReleaseBox from "../components/ReleaseBox.astro";
-import AboutMeBox from "../components/AboutMeBox.astro";
-
-const releases = [
-  {
-    title: "A New Life",
-    artist: "Asep Bagja",
-    coverArt: "/img/a-new-life.jpg",
-    streaming: {
-      spotify:
-        "https://open.spotify.com/album/5b16ZFMPa21KaQo35thX6f?si=RLSWl1_4SZCADcDFfJzbNw",
-      ytmusic:
-        "https://music.youtube.com/playlist?list=OLAK5uy_nZvBsFixdX7X9yuxjBy7a31GhOMQ3aH3M&feature=share",
-      appleMusic:
-        "https://music.apple.com/ee/album/a-new-life-single/1650494486",
-    },
-    releaseYear: "2022",
-  },
-  {
-    title: "People Just Want Peace",
-    artist: "Asep Bagja",
-    coverArt: "/img/people-just-want-peace.jpg",
-    streaming: {
-      spotify:
-        "https://open.spotify.com/album/2k7dErolqyRNO6JxlkTkke?si=DF9bCph-Q-aE9CU-lbpY0A",
-      ytmusic:
-        "https://music.youtube.com/playlist?list=OLAK5uy_k0LaLQSJhxc_bbMVTfmdFqsL-tEf5Ll2k&feature=share",
-      appleMusic:
-        "https://music.apple.com/ee/album/people-just-want-peace-single/1650893197",
-    },
-    releaseYear: "2022",
-  },
-  {
-    title: "The Enlightening Moment",
-    artist: "Asep Bagja",
-    coverArt: "/img/the-enlightening-moment.jpg",
-    streaming: {
-      spotify:
-        "https://open.spotify.com/album/6vVX3g1p1Q1K0py6kXAM41?si=WQaBypJ0RS-tzz76IRz9yg",
-      ytmusic:
-        "https://music.youtube.com/playlist?list=OLAK5uy_kSSHqVHLlpTB0uiRbBLrWDzslMZIdhY8s&feature=share",
-      appleMusic:
-        "https://music.apple.com/ee/album/the-enlightening-moment-ep/1650743218",
-    },
-    releaseYear: "2022",
-  },
-  {
-    title: "Minimalistlik",
-    artist: "Asep Bagja",
-    coverArt: "/img/minimalistlik.jpg",
-    streaming: {
-      spotify:
-        "https://open.spotify.com/album/37FSj03ms2ZcB9crH1EVXe?si=bF8WLw8kQA-jclSzDVarAQ",
-      ytmusic:
-        "https://music.youtube.com/playlist?list=OLAK5uy_n7hRRkAiZ5U2-PvJSK6WzXmaky424aGlc&feature=share",
-      appleMusic:
-        "https://music.apple.com/ee/album/minimalistlik-single/1650740772",
-    },
-    releaseYear: "2022",
-  },
-];
 ---
 
-<Layout title="Nanas Sound | A production music company">
+<Layout title="Nanas Sound">
   <main class="container">
     <!-- Hero -->
-    <section class="hero is-large mt-3">
-      <div class="hero-body">
-        <h1 class="title is-size-1 is-size-5-mobile has-text-white">
-          Sound shaping stories
-        </h1>
+    <div class="row my-3">
+      <div class="col-lg-8 offset-lg-2">
+        <img class="img-fluid rounded" src="/img/hero-3.jpg" alt="Nanas Sound hero image" />
       </div>
-    </section>
+    </div>
     <!-- end of hero -->
 
-    <section class="section">
-      <div class="columns">
-        <div class="column is-two-thirds">
-          <h2 class="is-size-4 has-text-weight-semibold">Music library</h2>
-          <article class="music-library pb-5 mt-1 mb-5">
-            <p>
-              Visit and buy my music licence for your video, film, and video
-              games project on:
-            </p>
-            <p>
-              <a
-                href="https://www.pond5.com/artist/nanassound?ref=nanassound"
-                class="button is-warning is-medium"
-                target="_blank"
-                rel="norefferer noopener"
-                title="Visit Nanas Sound's page in Pond5">Pond5</a>
-            </p>
-          </article>
-          <h2 class="is-size-4 has-text-weight-semibold">Releases</h2>
-          <p class="pb-3 mt-1">Singles and albums that I release on streaming platforms.</p>
-          {releases.map((release) => <ReleaseBox release={release} />)}
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <p><b>Nanas Sound</b> is an independent record label based in Tallinn, Estonia. As of now, we are 'not a true' record label 🙂. What does it means? It's a vehicle to release only <b>Asep Bagja</b>'s music works. We don't have any plan to release other artists in this label.</p>
+        <p>Streaming platforms: <a href="https://fairmusapp.page.link/rBrYaoYfokjm1pkE9" target="_blank">Fairmus</a> | <a href="https://music.youtube.com/channel/UC8C4fWKZJvALsC_9I0M5kFg?si=G4kNmx5pyZQO4CTo" target="_blank">YouTube Music</a> | <a href="https://www.youtube.com/@bepitulaz" target="_blank">YouTube</a> | <a href="https://open.spotify.com/artist/3ZluC2z0z35Pdv8Aky7qMx?si=zXISVL_HRmyMgxuAoYnzeg" target="_blank">Spotify</a> | <a href="https://music.apple.com/ee/artist/asep-bagja/1650464458" target="_blank">Apple Music</a></p>
+        <h3 class="mt-5 mb-3">Artist</h3>
+        <div class="d-flex">
+          <img class="avatar" src="/img/avatar.jpg" alt="Asep Bagja" />
+          <div>
+            <h5>Asep Bagja</h5>
+            <p>Label founder, electronic musician, <br />composer, and software engineer.</p>
+          </div>
         </div>
-        <div class="column">
-          <AboutMeBox />
-        </div>
+        <h3 class="mt-5 mb-3">Contact</h3>
+        <p>Email to <a href="mailto:asep@nanassound.com">asep@nanassound.com</a></p>
       </div>
-    </section>
+    </div>
+    
   </main>
 </Layout>
 
 <style>
-  section.hero {
-    background: url("/img/hero-2.png") center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .hero-body h1,
-  h2 {
-    font-family: "Roboto", sans-serif;
-  }
-
-  article.music-library p {
-    padding-bottom: 1rem;
+  .avatar {
+    width: 80;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 1rem;
   }
 </style>
