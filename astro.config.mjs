@@ -15,5 +15,9 @@ export default defineConfig({
     drafts: true
   })],
   output: "server",
-  adapter: netlify()
+  adapter: netlify(),
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+  },
 });

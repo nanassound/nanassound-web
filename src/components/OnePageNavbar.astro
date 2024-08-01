@@ -1,38 +1,55 @@
 <nav class="navbar navbar-expand-lg bg-white">
-  <div class="container">
+  <div class="container-fluid">
     <div class="navbar-brand">
       <a class="navbar-brand" href="/">
-        <img
-          src="/img/logo.png"
-          width="28"
-          height="28"
-          alt="Nanas Sound logo"
-        />
-        Nanas Sound
+        <img src="/img/logo.svg" height="80" alt="Nanas Sound logo" />
       </a>
     </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse justify-content-end navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="https://shop.nanassound.com" target="_blank">Buy releases</a>
+          <a class="nav-link p-0" href="#">
+            <p class="fs-3 mb-1">Products</p>
+          </a>
+          <p class="fs-6 lead m-0">eurorack modules</p>
+          <p class="fs-6 lead m-0 pl-3">
+            <a class="link-underline link-underline-opacity-0" href="https://cults3d.com/en/users/nanassound/3d-models" target="_blank" rel="norefferer noopenner">
+              3D printed parts
+            </a>
+          </p>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://www.asepbagja.com">asepbagja.com &rarr;</a>
+          <a class="nav-link py-0 pr-0 pl-3" href="https://shop.nanassound.com">
+            <p class="fs-3 lead mb-1">Shop</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link py-0 pr-0 pl-3" href="/about">
+            <p class="fs-3 lead mb-1">About</p>
+          </a>
         </li>
       </ul>
     </div>
   </div>
+
+  <style>
+    a.navbar-item {
+      color: #201a1a;
+    }
+
+    a.navbar-item:hover {
+      color: #fdd100;
+    }
+  </style>
 </nav>
-
-<style>
-	a.navbar-item {
-		color: #201a1a;
-	}
-
-	a.navbar-item:hover {
-		color: #fdd100;
-	}
-</style>

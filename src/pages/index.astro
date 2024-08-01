@@ -4,40 +4,87 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Nanas Sound">
-  <main class="container">
-    <!-- Hero -->
+  <!-- Uksed -->
+  <section class="container-fluid py-5">
     <div class="row my-3">
-      <div class="col-lg-8 offset-lg-2">
-        <img class="img-fluid rounded" src="/img/hero-3.jpg" alt="Nanas Sound hero image" />
-      </div>
-    </div>
-    <!-- end of hero -->
-
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2">
-        <p><b>Nanas Sound</b> is an independent record label based in Tallinn, Estonia. As of now, we are 'not a true' record label 🙂. What does it mean? It's a vehicle to release only <b>Asep Bagja</b>'s music works. We don't have any plan to release other artists on this label.</p>
-        <p>Streaming platforms: <a href="https://fairmusapp.page.link/rBrYaoYfokjm1pkE9" target="_blank">Fairmus</a> | <a href="https://music.youtube.com/channel/UC8C4fWKZJvALsC_9I0M5kFg?si=G4kNmx5pyZQO4CTo" target="_blank">YouTube Music</a> | <a href="https://www.youtube.com/@bepitulaz" target="_blank">YouTube</a> | <a href="https://open.spotify.com/artist/3ZluC2z0z35Pdv8Aky7qMx?si=zXISVL_HRmyMgxuAoYnzeg" target="_blank">Spotify</a> | <a href="https://music.apple.com/ee/artist/asep-bagja/1650464458" target="_blank">Apple Music</a></p>
-        <h3 class="mt-5 mb-3">Artist</h3>
-        <div class="d-flex">
-          <img class="avatar" src="/img/avatar.jpg" alt="Asep Bagja" />
-          <div>
-            <h5>Asep Bagja</h5>
-            <p>Label founder, electronic musician, <br />composer, and software engineer.</p>
+      <div class="col-12">
+        <div class="d-flex flex-column align-items-center">
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+              <h4 class="display-4 text-center">
+                Bring the external synth sound to the eurorack system
+              </h4>
+              <div class="col-12 mt-3 mb-5 text-center">
+                <a href="#" class="btn btn-warning"
+                  >Uksed DIY kit - Available soon</a
+                >
+              </div>
+              <div class="col-12 text-center">
+                <img
+                  height="500"
+                  src="/products-img/uksed.webp"
+                  alt="Uksed - 4-channel audio input module"
+                />
+              </div>
+            </div>
           </div>
         </div>
-        <h3 class="mt-5 mb-3">Contact</h3>
-        <p>Email to <a href="mailto:asep@nanassound.com">asep@nanassound.com</a></p>
       </div>
     </div>
-    
-  </main>
+  </section>
+  <!-- end of Uksed -->
+
+  <!-- Print this case -->
+  <section id="eurorack-case" class="container-fluid">
+    <div class="card border border-0 text-bg-dark">
+      <img
+        class="img-fluid"
+        src="/products-img/printthiscase@2x.webp"
+        alt="3D printed 84HP eurorack case"
+      />
+      <div
+        class="card-img-overlay p-0 d-flex align-items-end justify-content-end"
+      >
+        <div id="case-overlay" class="w-100 p-5">
+          <h4 class="display-4 text-lg-end">
+            Print your affordable<br />84 HP eurorack case
+          </h4>
+          <div class="text-lg-end">
+            <a href="https://cults3d.com/en/3d-model/tool/eurorack-case-84hp-rails-are-still-needed-nanassound" class="btn btn-warning" target="_blank" rel="noreferrer noopenner">
+              See how to do it
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of Print this case -->
 </Layout>
 
 <style>
-  .avatar {
-    width: 80;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 1rem;
+  #case-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7),
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  #eurorack-case {
+    position: relative;
+    overflow: hidden;
+  }
+
+  #eurorack-case::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/products-img/printthiscase@2x.webp");
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1; /* Ensure the pseudo-element is behind the content */
   }
 </style>
