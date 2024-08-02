@@ -35,32 +35,33 @@ import Layout from "../layouts/Layout.astro";
   <!-- end of Uksed -->
 
   <!-- Print this case -->
-  <section id="eurorack-case" class="container-fluid">
-    <div class="card border border-0 text-bg-dark">
-      <img
-        class="img-fluid"
-        src="/products-img/printthiscase@2x.webp"
-        alt="3D printed 84HP eurorack case"
-      />
-      <div
-        class="card-img-overlay p-0 d-flex align-items-end justify-content-end"
-      >
-        <div id="case-overlay" class="w-100 p-3 p-lg-5">
-          <h4 class="display-4 text-lg-end">
-            Print your affordable<br />84 HP eurorack case
-          </h4>
-          <div class="text-lg-end">
-            <a href="https://cults3d.com/en/3d-model/tool/eurorack-case-84hp-rails-are-still-needed-nanassound" class="btn btn-warning" target="_blank" rel="noreferrer noopenner">
-              See how to do it
-            </a>
-          </div>
+  <section class="card border border-0 text-bg-dark">
+    <img
+      class="img-fluid"
+      src="/products-img/printthiscase@2x.webp"
+      alt="3D printed 84HP eurorack case"
+    />
+    <div
+      class="card-img-overlay p-0 d-flex align-items-end justify-content-end"
+    >
+      <div id="case-overlay" class="w-100 p-4 p-lg-5">
+        <h4 class="display-4 text-lg-end">
+          Print your affordable<br />84 HP eurorack case
+        </h4>
+        <div class="text-lg-end">
+          <a
+            href="https://cults3d.com/en/3d-model/tool/eurorack-case-84hp-rails-are-still-needed-nanassound"
+            class="btn btn-warning"
+            target="_blank"
+            rel="noreferrer noopenner"
+          >
+            See how to do it
+          </a>
         </div>
       </div>
     </div>
   </section>
   <!-- end of Print this case -->
-
-  
 </Layout>
 
 <style>
@@ -70,23 +71,5 @@ import Layout from "../layouts/Layout.astro";
       rgba(0, 0, 0, 0.7),
       rgba(255, 255, 255, 0)
     );
-  }
-
-  #eurorack-case {
-    position: relative;
-    overflow: hidden;
-  }
-
-  #eurorack-case::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("/products-img/printthiscase@2x.webp");
-    background-size: cover;
-    filter: blur(10px);
-    z-index: -1; /* Ensure the pseudo-element is behind the content */
   }
 </style>
