@@ -1,16 +1,15 @@
 ---
-const { productName } = Astro.props
+const { productName } = Astro.props;
 
 const basePath = `/products/eurorack-modules/${productName.toLowerCase()}`;
 
 const currentPath = Astro.url.pathname;
 const isOverviewPage = currentPath === basePath;
-const isSchematicPage =
-  currentPath === `${basePath}/schematic`;
+const isSchematicPage = currentPath === `${basePath}/schematic`;
 const isBomPage = currentPath === `${basePath}/bom`;
 ---
 
-<section class="container py-3">
+<section class="sticky-section container py-3 bg-white">
   <div class="row">
     <div class="col">
       <ul class="nav nav-underline justify-content-center">
@@ -51,3 +50,11 @@ const isBomPage = currentPath === `${basePath}/bom`;
     </div>
   </div>
 </section>
+
+<style>
+  .sticky-section {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+</style>
