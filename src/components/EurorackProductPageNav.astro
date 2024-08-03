@@ -1,0 +1,53 @@
+---
+const { productName } = Astro.props
+
+const basePath = `/products/eurorack-modules/${productName.toLowerCase()}`;
+
+const currentPath = Astro.url.pathname;
+const isOverviewPage = currentPath === basePath;
+const isSchematicPage =
+  currentPath === `${basePath}/schematic`;
+const isBomPage = currentPath === `${basePath}/bom`;
+---
+
+<section class="container py-3">
+  <div class="row">
+    <div class="col">
+      <ul class="nav nav-underline justify-content-center">
+        <li class="nav-item fs-6">
+          <a
+            class={`nav-link ${isOverviewPage ? "active" : ""}`}
+            {...(isOverviewPage ? {'aria-current': 'page'}: {})}
+            href={basePath}>Overview</a
+          >
+        </li>
+        <li class="nav-item fs-6">
+          <a
+            class={`nav-link ${isSchematicPage ? "active" : ""}`}
+            href={`${basePath}/schematic`}
+            {...(isSchematicPage ? { 'aria-current': 'page' } : {})}
+          >
+            Schematic
+          </a>
+        </li>
+        <li class="nav-item fs-6">
+          <a
+            class={`nav-link ${isBomPage ? "active" : ""}`}
+            href={`${basePath}/bom`}
+            {...(isBomPage ? { 'aria-current': 'page' } : {})}
+          >
+            Bill of materials
+          </a>
+        </li>
+        <li class="nav-item fs-6">
+          <a
+            href="https://shop.nanassound.com/products/uksed-4-channels-audio-i-o-module"
+            class="nav-link"
+          >
+            <span class="badge bg-primary">Buy</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

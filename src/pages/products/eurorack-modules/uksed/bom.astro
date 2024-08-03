@@ -1,0 +1,164 @@
+---
+import "@fontsource/roboto";
+import Layout from "../../../../layouts/Layout.astro";
+import EurorackProductPageNav from "../../../../components/EurorackProductPageNav.astro";
+---
+
+<Layout title="The schematic of Uksed | Nanas Sound">
+  <!-- hero -->
+  <section class="card border border-0 text-bg-light">
+    <img
+      class="img-fluid"
+      src="/products-img/uksed-product-page.webp"
+      alt="Uksed in action"
+    />
+    <div class="card-img-overlay p-0">
+      <div
+        id="case-overlay"
+        class="w-100 h-100 d-flex flex-column align-items-center justify-content-center"
+      >
+        <h1 class="display-1 text-center fw-bold">Uksed</h1>
+        <h2 class="display-4 lead text-center">
+          4-channels audio input module
+        </h2>
+        <div class="d-flex justify-content-center gap-1">
+          <p>Available as</p>
+          <h5><span class="badge bg-warning text-dark">DIY kit</span></h5>
+          <p>and</p>
+          <h5><span class="badge bg-warning text-dark">Assembled</span></h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <EurorackProductPageNav productName="uksed" />
+
+  <section class="container py-3 py-lg-5">
+    <div class="row">
+      <div class="col-12 col-lg-8 offset-lg-2">
+        <h2 class="display-2 text-center">Bill of materials for Uksed</h2>
+        <article class="my-5">
+          <p class="fs-4">
+            Ready to build your own Uksed? Our comprehensive Bill of Materials
+            (BOM) provides a detailed list of all needed components. Each part
+            is listed to ensure you have everything required for a successful
+            build. Use this BOM as your shopping guide to source the exact
+            components and bring your Uksed to life.
+          </p>
+        </article>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Reference</th>
+                <th scope="col">Value</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Where to buy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">C1, C2, C3, C4</th>
+                <td>33pF (ceramic capacitor)</td>
+                <td>4</td>
+                <td
+                  ><a
+                    href="https://eu.mouser.com/ProductDetail/Murata-Electronics/RCE5C2J330J1K1H03B"
+                    target="_blank">Mouser Europe</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">J1, J2, J3, J4, J5, J6, J7, J8</th>
+                <td>Thonkiconn Mono 3.5mm WQP518MA</td>
+                <td>8</td>
+                <td
+                  ><a
+                    href="https://www.thonk.co.uk/shop/thonkiconn/"
+                    target="_blank">Thonk</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">J9</th>
+                <td>Eurorack 16pin Power Headers - Shrouded</td>
+                <td>1</td>
+                <td
+                  ><a
+                    href="https://www.thonk.co.uk/shop/eurorack-diy-essentials/"
+                    target="_blank">Thonk</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">R1, R2, R3, R4</th>
+                <td>10K (resistor 1/4W)</td>
+                <td>4</td>
+                <td
+                  ><a
+                    href="https://eu.mouser.com/ProductDetail/SparkFun/PRT-14491"
+                    target="_blank">Mouser Europe</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">R5, R6, R7, R8</th>
+                <td>1K (resistor 1/4W)</td>
+                <td>4</td>
+                <td
+                  ><a
+                    href="https://eu.mouser.com/ProductDetail/SparkFun/PRT-14492"
+                    target="_blank">Mouser Europe</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">RV1, RV2, RV3, RV4</th>
+                <td>B100K (Alpha 9mm pots vertical)</td>
+                <td>4</td>
+                <td
+                  ><a
+                    href="https://www.thonk.co.uk/shop/alpha-9mm-pots-vertical-t18/"
+                    target="_blank">Thonk</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">U1</th>
+                <td>TL074</td>
+                <td>1</td>
+                <td
+                  ><a
+                    href="https://www.thonk.co.uk/shop/eurorack-diy-essentials/"
+                    target="_blank">Thonk</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">PCB</th>
+                <td>You can buy PCB and the module panel from us</td>
+                <td>1</td>
+                <td
+                  ><a
+                    href="https://shop.nanassound.com/products/uksed-4-channels-audio-i-o-module"
+                    target="_blank">Nanas Sound</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  #case-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0)
+    );
+  }
+</style>

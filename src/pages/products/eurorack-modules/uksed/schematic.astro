@@ -1,0 +1,73 @@
+---
+import "@fontsource/roboto";
+import Layout from "../../../../layouts/Layout.astro";
+import EurorackProductPageNav from "../../../../components/EurorackProductPageNav.astro";
+---
+
+<Layout title="The schematic of Uksed | Nanas Sound">
+  <!-- hero -->
+  <section class="card border border-0 text-bg-light">
+    <img
+      class="img-fluid"
+      src="/products-img/uksed-product-page.webp"
+      alt="Uksed in action"
+    />
+    <div class="card-img-overlay p-0">
+      <div
+        id="case-overlay"
+        class="w-100 h-100 d-flex flex-column align-items-center justify-content-center"
+      >
+        <h1 class="display-1 text-center fw-bold">Uksed</h1>
+        <h2 class="display-4 lead text-center">
+          4-channels audio input module
+        </h2>
+        <div class="d-flex justify-content-center gap-1">
+          <p>Available as</p>
+          <h5><span class="badge bg-warning text-dark">DIY kit</span></h5>
+          <p>and</p>
+          <h5><span class="badge bg-warning text-dark">Assembled</span></h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <EurorackProductPageNav productName="uksed" />
+
+  <section class="container py-3 py-lg-5">
+    <div class="row">
+      <div class="col-12 col-lg-8 offset-lg-2">
+        <h2 class="display-2 text-center">
+          Discover the inner workings of Uksed
+        </h2>
+        <article class="my-5">
+          <p class="fs-4">
+            Take a deep dive into <b>Uksed</b> with our detailed schematic. Understand how each component is interconnected and contributes to its flawless operation.
+          </p>
+          <p class="fs-4">
+            With the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="norefferer noopenner">CC BY-SA 4.0</a> license, you're free to adapt and use this schematic in your own projects. Get inspired and bring your creative ideas to life!
+          </p>
+          <iframe
+            src="/schematics/Uksed.pdf"
+            width="100%"
+            height="610"
+            style="border:none"
+            title="Uksed schematic PDF"
+          ></iframe>
+          <p class="fs-4">
+            Download the schematic as a PDF file: <a href="/schematics/Uksed.pdf" target="_blank" rel="norefferer noopenner">Uksed schematic</a>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  #case-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0)
+    );
+  }
+</style>
