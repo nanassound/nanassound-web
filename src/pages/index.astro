@@ -1,75 +1,82 @@
 ---
 import "@fontsource/roboto";
 import Layout from "../layouts/Layout.astro";
+import AboutMeBox from "../components/AboutMeBox.astro";
 ---
 
 <Layout title="Nanas Sound">
-  <!-- Uksed -->
-  <section class="container-fluid py-5">
-    <div class="row my-3">
-      <div class="col-12">
-        <div class="d-flex flex-column align-items-center">
-          <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-              <h4 class="display-4 text-center">
-                Bring external audio to your Eurorack system
-              </h4>
-              <div class="mt-3 mb-5 text-center">
-                <a href="/products/eurorack-modules/uksed" class="btn btn-warning">
-                  Learn about Uksed
-                </a>
-              </div>
-              <div class="text-center">
-                <img
-                  class="img-fluid"
-                  src="/products-img/uksed.webp"
-                  alt="Uksed - 4-channel audio input module"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end of Uksed -->
-
-  <!-- Print this case -->
-  <section class="card border border-0 text-bg-dark">
-    <img
-      class="img-fluid"
-      src="/products-img/printthiscase@2x.webp"
-      alt="3D printed 84HP eurorack case"
-    />
-    <div
-      class="card-img-overlay p-0 d-flex align-items-end justify-content-end"
-    >
-      <div id="case-overlay" class="w-100 p-4 p-lg-5">
-        <h4 class="display-4 text-lg-end">
-          Print your affordable<br />84 HP Eurorack case
-        </h4>
-        <div class="text-lg-end">
-          <a
-            href="https://cults3d.com/en/3d-model/tool/eurorack-case-84hp-rails-are-still-needed-nanassound"
-            class="btn btn-warning"
-            target="_blank"
-            rel="noreferrer noopenner"
-          >
-            See how to do it
+  <!-- Hero -->
+  <div class="px-4 lg:px-6 lg:px-8 pt-4 pb-10">
+    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('/products-img/mini-main.webp')] bg-cover bg-bottom bg-no-repeat">
+      <div class="mt-auto ps-5 py-5 md:ps-10 md:py-10">
+        <span class="block font-bold text-3xl md:text-5xl text-yellow-400 text-center">Mini - Power Supply</span>
+        <span class="block text-dark text-xl md:text-3xl text-center">Standalone / 3U rack / Inside the case</span>
+        <div class="mt-5 flex gap-x-2 justify-center">
+          <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-yellow-400 border border-transparent text-black hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 disabled:opacity-50 disabled:pointer-events-none" href="#">
+            Learn more
+          </a>
+          <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm text-dark font-medium rounded-xl border border-yellow-400 hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 disabled:opacity-50 disabled:pointer-events-none" href="https://www.elecrow.com/mini-usb-c-power-supply-for-eurorack.html" target="_blank">
+            Buy now
           </a>
         </div>
       </div>
     </div>
-  </section>
-  <!-- end of Print this case -->
-</Layout>
+  </div>
+  <!-- End hero -->
 
-<style>
-  #case-overlay {
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.7),
-      rgba(255, 255, 255, 0)
-    );
-  }
-</style>
+  <!-- Features -->
+  <div class="px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-yellow-200">
+    <!-- Title -->
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl lg:text-4xl text-dark-800 font-bold">
+        Compact &amp; Portable
+      </h2>
+      <p class="mt-3 text-gray-800">
+        Play electronic music instruments anywhere.
+      </p>
+    </div>
+    <!-- End Title -->
+  </div>
+  <!-- End Features -->
+
+  <!-- Two additional columns -->
+  <div class="grid grid-cols-1 gap-4 px-4 md:grid-cols-2 lg:px-6 lg:px-8 pt-4 pb-10">
+    <div class="bg-neutral-50 p-5">
+      <div class="mt-auto rounded-b-2xl ps-5 py-5 md:ps-10 md:py-10">
+        <span class="block font-bold text-xl md:text-3xl text-dark-800 text-center">Mini - 3D printed 42HP skiff</span>
+        <span class="block text-dark text-lg md:text-xl text-center">Build your own Mini Eurorack case</span>
+        <div class="mt-5 flex gap-x-2 justify-center">
+          <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-yellow-400 border border-transparent text-black hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 disabled:opacity-50 disabled:pointer-events-none" href="#">
+            Learn more
+          </a>
+          <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm text-dark font-medium rounded-xl border border-yellow-400 hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 disabled:opacity-50 disabled:pointer-events-none" href="https://cults3d.com/en/3d-model/tool/mini-42-hp-eurorack-skiff-with-usb-c-power-supply" target="_blank">
+            Buy now
+          </a>
+        </div>
+      </div>
+      <img src="/products-img/mini-skiff.webp" alt="Mini - 42HP Skiff" class="w-auto h-auto mx-auto rounded-xl">
+    </div>
+    <div class="bg-neutral-50 p-5">
+      <div class="mt-auto rounded-b-2xl ps-5 py-5 md:ps-10 md:py-10">
+        <span class="block font-bold text-xl md:text-3xl text-dark-800 text-center">3D printed 84HP case</span>
+        <span class="block text-dark text-lg md:text-xl text-center">Fit for any 84HP Eurorack rails</span>
+        <div class="mt-5 flex gap-x-2 justify-center">
+          <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-yellow-400 border border-transparent text-black hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 disabled:opacity-50 disabled:pointer-events-none" href="#">
+            Learn more
+          </a>
+          <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm text-dark font-medium rounded-xl border border-yellow-400 hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 disabled:opacity-50 disabled:pointer-events-none" href="https://cults3d.com/en/3d-model/tool/eurorack-case-84hp-rails-are-still-needed-nanassound" target="_blank">
+            Buy now
+          </a>
+        </div>
+      </div>
+      <img src="/products-img/printthiscase@2x.webp" alt="84HP Eurorack case" class="w-auto h-auto mx-auto rounded-xl">
+    </div>
+  </div>
+  <!-- End Two additional columns -->
+
+  <!-- About me -->
+  <div class="px-4 mb-10 sm:px-6 lg:px-8 mx-auto">
+    <AboutMeBox />
+  </div>
+  <!-- End About me -->
+</Layout>
