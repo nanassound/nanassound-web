@@ -1,3 +1,25 @@
+---
+const currentPath = Astro.url.pathname;
+
+// Define your navigation items
+const navItems = [
+  { path: '/', label: 'Home' },
+  { path: '/eurorack-modules', label: 'Eurorack modules' },
+  { 
+    path: 'https://cults3d.com/en/users/nanassound/3d-models', 
+    label: '3D printed parts',
+    external: true 
+  }
+];
+
+// Helper function to check if path is current
+const isCurrentPage = (path: string) => {
+  if (path === '/') {
+    return currentPath === path;
+  }
+  return currentPath.startsWith(path);
+}
+---
 <!-- ========== HEADER ========== -->
 <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full py-7">
   <nav class="relative max-w-7xl w-full flex flex-wrap md:grid md:grid-cols-12 basis-full items-center px-4 md:px-6 md:px-8 mx-auto">
@@ -43,15 +65,23 @@
     <!-- Collapse -->
     <div id="hs-navbar-hcail" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block md:w-auto md:basis-auto md:order-2 md:col-span-6" aria-labelledby="hs-navbar-hcail-collapse">
       <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:justify-center md:items-center md:gap-y-0 md:gap-x-7 md:mt-0">
-        <div>
-          <a class="relative inline-block text-black focus:outline-none before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-yellow-400" href="/" aria-current="page">Home</a>
-        </div>
-        <div>
-          <a class="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600 dark:hover:text-neutral-300 dark:focus:text-neutral-300" href="#">Eurorack modules</a>
-        </div>
-        <div>
-          <a class="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600 dark:hover:text-neutral-300 dark:focus:text-neutral-300" href="https://cults3d.com/en/users/nanassound/3d-models" target="_blank" rel="norefferer noopenner">3D printed parts</a>
-        </div>
+        {navItems.map(({ path, label, external }) => (
+          <div>
+            <a 
+              href={path}
+              class:list={[
+                'inline-block text-black focus:outline-none',
+                isCurrentPage(path) 
+                  ? 'relative before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-yellow-400'
+                  : 'hover:text-gray-600 focus:text-gray-600 dark:hover:text-neutral-300 dark:focus:text-neutral-300'
+              ]}
+              aria-current={isCurrentPage(path) ? 'page' : undefined}
+              {...external ? { target: '_blank', rel: 'noreferrer noopener' } : {}}
+            >
+              {label}
+            </a>
+          </div>
+        ))}
       </div>
     </div>
     <!-- End Collapse -->

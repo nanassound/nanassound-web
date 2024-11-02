@@ -4,36 +4,48 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="About | Nanas Sound">
-  <div class="container-fluid pb-5">
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2">
-        <h1 class="display-4 text-center my-5">Our story: Nanas Sound</h1>
-        <p class="fs-4">
+  <div class="px-4 sm:px-6 lg:px-8 pb-10">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold text-center my-10">Our story: Nanas Sound</h1>
+      
+      <div class="space-y-6 text-lg text-gray-800 dark:text-neutral-500">
+        <p>
           <b>Nanas Sound</b> began in 2021 as a passionate music project by Asep Bagja, a software engineer and electronic music enthusiast, in Tallinn, Estonia. Originally, Asep started Nanas Sound to release his own music, which you can now enjoy on
-          <a
-            href="https://music.youtube.com/channel/UC8C4fWKZJvALsC_9I0M5kFg?si=G4kNmx5pyZQO4CTo"
-            target="_blank">YouTube Music</a
-          >, <a href="https://www.youtube.com/@bepitulaz" target="_blank"
-            >YouTube</a
-          >, <a
-            href="https://open.spotify.com/artist/3ZluC2z0z35Pdv8Aky7qMx?si=zXISVL_HRmyMgxuAoYnzeg"
-            target="_blank">Spotify</a
-          >, and <a
-            href="https://music.apple.com/ee/artist/asep-bagja/1650464458"
-            target="_blank">Apple Music</a
-          >.
+          <a href="https://music.youtube.com/channel/UC8C4fWKZJvALsC_9I0M5kFg?si=G4kNmx5pyZQO4CTo" 
+             class="text-yellow-600 hover:text-yellow-800" 
+             target="_blank">YouTube Music</a>,
+          <a href="https://www.youtube.com/@bepitulaz" 
+             class="text-yellow-600 hover:text-yellow-800" 
+             target="_blank">YouTube</a>,
+          <a href="https://open.spotify.com/artist/3ZluC2z0z35Pdv8Aky7qMx?si=zXISVL_HRmyMgxuAoYnzeg" 
+             class="text-yellow-600 hover:text-yellow-800" 
+             target="_blank">Spotify</a>, and
+          <a href="https://music.apple.com/ee/artist/asep-bagja/1650464458" 
+             class="text-yellow-600 hover:text-yellow-800" 
+             target="_blank">Apple Music</a>.
         </p>
-        <p class="fs-4">
+
+        <p>
           Driven by a fascination with modular synthesizers, Asep expanded Nanas Sound beyond music production. He began designing and building Eurorack modules, transforming his hobby into a brand. Today, Nanas Sound proudly offers DIY Eurorack modules and 3D-printed synth parts for fellow enthusiasts and creators.
         </p>
-        <p class="fs-4">For any inquiries, feel free to reach out to Asep at <a href="mailto:asep@nanassound.com">asep@nanassound.com</a>. Join us on this creative journey and explore the endless possibilities of sound.</p>
-        <h3 class="my-5">Team...it's only him for now 🙂</h3>
-        <div class="d-flex">
-          <img class="avatar" src="/img/avatar.jpg" alt="Asep Bagja" />
+
+        <p>
+          For any inquiries, feel free to reach out to Asep at 
+          <a href="mailto:asep@nanassound.com" 
+             class="text-yellow-600 hover:text-yellow-800">asep@nanassound.com</a>. 
+          Join us on this creative journey and explore the endless possibilities of sound.
+        </p>
+
+        <h3 class="text-2xl md:text-3xl font-bold my-10">Team...it's only him for now 🙂</h3>
+        
+        <div class="flex items-start gap-4">
+          <img class="w-20 h-20 rounded-full" src="/img/avatar.jpg" alt="Asep Bagja" />
           <div>
-            <h5 class="display-6">Asep Bagja</h5>
-            <p class="fs-4">
-              Chief Everything Officer.<br />I do everything from designing, coding, soldering, testing, and shipping.<br />I also do music production and release my music under my name.
+            <h5 class="text-2xl md:text-3xl font-bold">Asep Bagja</h5>
+            <p>
+              Chief Everything Officer.<br />
+              I do everything from designing, coding, soldering, testing, and shipping.<br />
+              I also do music production and release my music under my name.
             </p>
           </div>
         </div>
@@ -41,12 +53,3 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 </Layout>
-
-<style>
-  .avatar {
-    width: 80;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 1rem;
-  }
-</style>

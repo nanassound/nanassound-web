@@ -1,60 +1,37 @@
 ---
 const { productName } = Astro.props;
-
 const basePath = `/products/eurorack-modules/${productName.toLowerCase()}`;
-
 const currentPath = Astro.url.pathname;
-const isOverviewPage = currentPath === basePath;
-const isSchematicPage = currentPath === `${basePath}/schematic`;
-const isBomPage = currentPath === `${basePath}/bom`;
+
+const navItems = [
+  { path: basePath, label: 'Overview' },
+  { path: `${basePath}/schematic`, label: 'Schematic' },
+  { path: `${basePath}/bom`, label: 'Bill of materials' },
+];
 ---
 
-<section class="sticky-section container py-3 bg-white">
-  <div class="row">
-    <div class="col">
-      <ul class="nav nav-underline justify-content-center">
-        <li class="nav-item fs-6">
-          <a
-            class={`nav-link ${isOverviewPage ? "active" : ""}`}
-            {...(isOverviewPage ? {'aria-current': 'page'}: {})}
-            href={basePath}>Overview</a
-          >
-        </li>
-        <li class="nav-item fs-6">
-          <a
-            class={`nav-link ${isSchematicPage ? "active" : ""}`}
-            href={`${basePath}/schematic`}
-            {...(isSchematicPage ? { 'aria-current': 'page' } : {})}
-          >
-            Schematic
-          </a>
-        </li>
-        <li class="nav-item fs-6">
-          <a
-            class={`nav-link ${isBomPage ? "active" : ""}`}
-            href={`${basePath}/bom`}
-            {...(isBomPage ? { 'aria-current': 'page' } : {})}
-          >
-            Bill of materials
-          </a>
-        </li>
-        <li class="nav-item fs-6">
-          <a
-            href="https://shop.nanassound.com/products/uksed-4-channels-audio-i-o-module"
-            class="btn btn-primary fs-6"
-          >
-            Buy
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<style>
-  .sticky-section {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-  }
-</style>
+<div class="sticky top-0 bg-white px-4 py-3 sm:px-6 lg:px-8">
+  <nav class="flex justify-center gap-x-4">
+    {navItems.map(({ path, label }) => (
+      <a
+        href={path}
+        class:list={[
+          'py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl border',
+          currentPath === path
+            ? 'bg-yellow-400 border-transparent text-black'
+            : 'border-yellow-400 hover:bg-yellow-500 text-dark'
+        ]}
+        aria-current={currentPath === path ? 'page' : undefined}
+      >
+        {label}
+      </a>
+    ))}
+    <a
+      href="https://shop.nanassound.com/products/uksed-4-channels-audio-i-o-module"
+      class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-yellow-400 border border-transparent text-black hover:bg-yellow-500"
+      target="_blank"
+    >
+      Buy
+    </a>
+  </nav>
+</div>
