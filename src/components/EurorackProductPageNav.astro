@@ -1,5 +1,5 @@
 ---
-const { productName } = Astro.props;
+const { productName, buyLink = null } = Astro.props;
 const basePath = `/products/eurorack-modules/${productName.toLowerCase()}`;
 const currentPath = Astro.url.pathname;
 
@@ -26,12 +26,14 @@ const navItems = [
         {label}
       </a>
     ))}
-    <a
-      href="https://shop.nanassound.com/products/uksed-4-channels-audio-i-o-module"
-      class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-yellow-400 border border-transparent text-black hover:bg-yellow-500"
-      target="_blank"
-    >
-      Buy
-    </a>
+    {buyLink && (
+      <a
+        href={buyLink}
+        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-yellow-400 border border-transparent text-black hover:bg-yellow-500"
+        target="_blank"
+      >
+        Buy
+      </a>
+    )}
   </nav>
 </div>

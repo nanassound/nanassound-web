@@ -2,6 +2,7 @@
 import "@fontsource/roboto";
 import Layout from "../../../../layouts/Layout.astro";
 import EurorackProductPageNav from "../../../../components/EurorackProductPageNav.astro";
+import AttentionBanner from "../../../../components/AttentionBanner.astro";
 ---
 
 <Layout title="Uksed - 4-channel audio I/O | Nanas Sound">
@@ -17,6 +18,8 @@ import EurorackProductPageNav from "../../../../components/EurorackProductPageNa
     </div>
   </div>
   <!-- End hero -->
+
+  <AttentionBanner text="We are redesigning the schematic of Uksed. The new version will be available soon." />
 
   <EurorackProductPageNav productName="uksed" />
 
@@ -64,8 +67,6 @@ import EurorackProductPageNav from "../../../../components/EurorackProductPageNa
           <li>Width: 8 HP</li>
           <li>Depth: 27mm (including power connector)</li>
           <li>Power consumption +12V → 0.5mA, -12V → 0.5mA</li>
-          <li>3D printed panel with 2mm PLA+ filament</li>
-          <li>Designed in Tallinn, Estonia</li>
         </ul>
       </div>
     </div>

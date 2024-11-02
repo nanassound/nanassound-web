@@ -2,72 +2,64 @@
 import "@fontsource/roboto";
 import Layout from "../../../../layouts/Layout.astro";
 import EurorackProductPageNav from "../../../../components/EurorackProductPageNav.astro";
+import AttentionBanner from "../../../../components/AttentionBanner.astro";
 ---
 
 <Layout title="The schematic of Uksed | Nanas Sound">
-  <!-- hero -->
-  <section class="card border border-0 text-bg-light">
-    <img
-      class="img-fluid"
-      src="/products-img/uksed-product-page.webp"
-      alt="Uksed in action"
-    />
-    <div class="card-img-overlay p-0">
-      <div
-        id="case-overlay"
-        class="w-100 h-100 d-flex flex-column align-items-center justify-content-center"
-      >
-        <h1 class="display-1 text-center fw-bold">Uksed</h1>
-        <h2 class="display-4 lead text-center">
+  <!-- Hero -->
+  <div class="lg:px-6 pt-4">
+    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('/products-img/uksed-product-page.webp')] bg-cover bg-center bg-no-repeat">
+      <div class="mt-auto bg-gradient-to-t from-black/80 via-black/50 to-black/0 ps-5 py-5 md:ps-10 md:py-10">
+        <h1 class="block font-bold text-3xl md:text-5xl text-yellow-400 text-center">Uksed</h1>
+        <p class="block text-white text-xl md:text-3xl text-center">
           4-channels audio input module
-        </h2>
-        <div class="d-flex justify-content-center gap-1">
-          <p>Available as</p>
-          <h5><span class="badge bg-warning text-dark">DIY kit</span></h5>
-          <p>and</p>
-          <h5><span class="badge bg-warning text-dark">Assembled</span></h5>
-        </div>
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+  <!-- End hero -->
+  
+  <AttentionBanner text="We are redesigning the schematic of Uksed. The new version will be available soon." />
 
   <EurorackProductPageNav productName="uksed" />
 
-  <section class="container py-3 py-lg-5">
-    <div class="row">
-      <div class="col-12 col-lg-8 offset-lg-2">
-        <h2 class="display-2 text-center">
-          Discover the inner workings of Uksed
-        </h2>
-        <article class="my-5">
-          <p class="fs-4">
-            Take a deep dive into <b>Uksed</b> with our detailed schematic. Understand how each component is interconnected and contributes to its flawless operation.
-          </p>
-          <p class="fs-4">
-            With the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="norefferer noopenner">CC BY-SA 4.0</a> license, you're free to adapt and use this schematic in your own projects. Get inspired and bring your creative ideas to life!
-          </p>
-          <iframe
-            src="/schematics/Uksed.pdf"
-            width="100%"
-            height="610"
-            style="border:none"
-            title="Uksed schematic PDF"
-          ></iframe>
-          <p class="fs-4">
-            Download the schematic as a PDF file: <a href="/schematics/Uksed.pdf" target="_blank" rel="norefferer noopenner">Uksed schematic</a>
-          </p>
-        </article>
+  <!-- Content -->
+  <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+        Discover the inner workings of Uksed
+      </h2>
+
+      <div class="space-y-8">
+        <p class="text-lg md:text-xl">
+          Take a deep dive into <b>Uksed</b> with our detailed schematic. Understand how each component is interconnected and contributes to its flawless operation.
+        </p>
+
+        <p class="text-lg md:text-xl">
+          With the <a href="https://creativecommons.org/licenses/by-sa/4.0/" 
+             target="_blank" 
+             rel="noreferrer noopener"
+             class="text-yellow-600 hover:text-yellow-800">CC BY-SA 4.0</a> license, 
+          you're free to adapt and use this schematic in your own projects. Get inspired and bring your creative ideas to life!
+        </p>
+
+        <iframe
+          src="/schematics/Uksed.pdf"
+          class="w-full h-[610px] border-none"
+          title="Uksed schematic PDF"
+        />
+
+        <p class="text-lg md:text-xl">
+          Download the schematic as a PDF file: 
+          <a href="/schematics/Uksed.pdf" 
+             target="_blank" 
+             rel="noreferrer noopener"
+             class="text-yellow-600 hover:text-yellow-800">
+            Uksed schematic
+          </a>
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+  <!-- End Content -->
 </Layout>
-
-<style>
-  #case-overlay {
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0)
-    );
-  }
-</style>
