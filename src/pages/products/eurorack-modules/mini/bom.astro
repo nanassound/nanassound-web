@@ -1,0 +1,177 @@
+---
+import "@fontsource/roboto";
+import Layout from "../../../../layouts/Layout.astro";
+import EurorackProductPageNav from "../../../../components/EurorackProductPageNav.astro";
+---
+
+<Layout title="Bill of materials for Mini | Nanas Sound">
+  <!-- Hero -->
+  <div class="lg:px-6 pt-4">
+    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('/products-img/mini-main.webp')] bg-cover bg-center bg-no-repeat">
+      <div class="mt-auto bg-gradient-to-t from-black/80 via-black/50 to-black/0 ps-5 py-5 md:ps-10 md:py-10">
+        <h1 class="block font-bold text-3xl md:text-5xl text-yellow-400 text-center">Mini</h1>
+        <p class="block text-white text-xl md:text-3xl text-center">
+          USB-C power supply
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End hero -->
+
+  <EurorackProductPageNav productName="mini" buyLink="https://www.elecrow.com/mini-usb-c-power-supply-for-eurorack.html" />
+
+  <!-- Content -->
+  <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+        Bill of materials for Mini
+      </h2>
+
+      <div class="space-y-8">
+        <p class="text-lg md:text-xl">
+          Ready to build your own Mini? Our comprehensive Bill of Materials (BOM) provides a detailed list of all needed components. Each part is listed to ensure you have everything required for a successful build. Use this BOM as your shopping guide to source the exact components and bring your Mini to life.
+        </p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <caption class="text-sm text-gray-600 text-left mb-2">
+              <span class="text-red-500">*)</span> You don't have to buy from these stores, as long as you can find the equivalent component.
+            </caption>
+            <thead>
+              <tr class="border-b border-gray-200">
+                <th class="py-3 px-4 font-semibold">Reference</th>
+                <th class="py-3 px-4 font-semibold">Value</th>
+                <th class="py-3 px-4 font-semibold">Quantity</th>
+                <th class="py-3 px-4 font-semibold">Where to buy</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4">L+5V</td>
+                <td class="py-3 px-4">YLED0402G</td>
+                <td class="py-3 px-4">1</td>
+                <td class="py-3 px-4">
+                  <a href="https://www.lcsc.com/product-detail/LED-Indication-Discrete_YONGYUTAI-YLED0402G_C20608784.html" 
+                     target="_blank"
+                     class="text-yellow-600 hover:text-yellow-800">LCSC</a>
+                  <span class="text-red-500">*</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4">L+12V</td>
+                <td class="py-3 px-4">YLED0402R</td>
+                <td class="py-3 px-4">1</td>
+                <td class="py-3 px-4">
+                  <a href="https://www.lcsc.com/product-detail/LED-Indication-Discrete_YONGYUTAI-YLED0402R_C21260817.html" 
+                     target="_blank"
+                     class="text-yellow-600 hover:text-yellow-800">LCSC</a>
+                  <span class="text-red-500">*</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4">L-12V</td>
+                <td class="py-3 px-4">YLED0402Y</td>
+                <td class="py-3 px-4">1</td>
+                <td class="py-3 px-4">
+                  <a href="https://www.lcsc.com/product-detail/LED-Indication-Discrete_YONGYUTAI-YLED0402Y_C20608782.html" 
+                     target="_blank"
+                     class="text-yellow-600 hover:text-yellow-800">LCSC</a>
+                  <span class="text-red-500">*</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4">C1</td>
+                <td class="py-3 px-4">10nF</td>
+                <td class="py-3 px-4">1</td>
+                <td class="py-3 px-4">
+                  <a href="https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_YAGEO-CC0603KRX7R9BB103_C100042.html" 
+                     target="_blank"
+                     class="text-yellow-600 hover:text-yellow-800">LCSC</a>
+                  <span class="text-red-500">*</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4">PS1</td>
+                <td class="py-3 px-4">Mean Well DKM10E-12</td>
+                <td class="py-3 px-4">1</td>
+                <td class="py-3 px-4">
+                  <a href="https://www.digikey.ee/en/products/detail/mean-well-usa-inc/dkm10e-12/7702801" 
+                     target="_blank"
+                     class="text-yellow-600 hover:text-yellow-800">DigiKey</a>
+                  <span class="text-red-500">*</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4">R1, R2</td>
+                <td class="py-3 px-4">5.1kΩ</td>
+                <td class="py-3 px-4">2</td>
+                <td class="py-3 px-4">
+                  <a href="https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0603JR-075K1L_C14677.html" 
+                     target="_blank"
+                     class="text-yellow-600 hover:text-yellow-800">LCSC</a>
+                  <span class="text-red-500">*</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4">R3, R4</td>
+                <td class="py-3 px-4">2.2kΩ</td>
+                <td class="py-3 px-4">2</td>
+                <td class="py-3 px-4">
+                  <a href="https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-1206W4F2201T5E_C17948.html" 
+                     target="_blank"
+                     class="text-yellow-600 hover:text-yellow-800">LCSC</a>
+                  <span class="text-red-500">*</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4">R5</td>
+                <td class="py-3 px-4">1.5kΩ</td>
+                <td class="py-3 px-4">1</td>
+                <td class="py-3 px-4">
+                  <a href="https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-1206W4F1501T5E_C26030.html" 
+                     target="_blank"
+                     class="text-yellow-600 hover:text-yellow-800">LCSC</a>
+                  <span class="text-red-500">*</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4">USBC1</td>
+                <td class="py-3 px-4">USB-C_SMD-TYPE-C-31-M-12</td>
+                <td class="py-3 px-4">1</td>
+                <td class="py-3 px-4">
+                  <a href="https://www.lcsc.com/product-detail/USB-Connectors_Korean-Hroparts-Elec-TYPE-C-31-M-12_C165948.html" 
+                     target="_blank"
+                     class="text-yellow-600 hover:text-yellow-800">LCSC</a>
+                  <span class="text-red-500">*</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4">FUSE</td>
+                <td class="py-3 px-4">ASMD1812-200</td>
+                <td class="py-3 px-4">1</td>
+                <td class="py-3 px-4">
+                  <a href="https://www.lcsc.com/product-detail/Resettable-Fuses_Shenzhen-JDT-Fuse-ASMD1812-200_C135364.html" 
+                     target="_blank"
+                     class="text-yellow-600 hover:text-yellow-800">LCSC</a>
+                  <span class="text-red-500">*</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4">P1, P2, P3, P4</td>
+                <td class="py-3 px-4">IDC-TH_16P-P2.54_C3406</td>
+                <td class="py-3 px-4">4</td>
+                <td class="py-3 px-4">
+                  <a href="https://www.lcsc.com/product-detail/IDC-Connectors_BOOMELE-Boom-Precision-Elec-2-54-2-8P_C3406.html" 
+                     target="_blank"
+                     class="text-yellow-600 hover:text-yellow-800">LCSC</a>
+                  <span class="text-red-500">*</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Content -->
+</Layout>
