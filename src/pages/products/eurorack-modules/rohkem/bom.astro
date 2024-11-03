@@ -1,0 +1,67 @@
+---
+import "@fontsource/roboto";
+import Layout from "../../../../layouts/Layout.astro";
+import EurorackProductPageNav from "../../../../components/EurorackProductPageNav.astro";
+---
+
+<Layout title="Bill of materials for Rohkem | Nanas Sound">
+  <!-- Hero -->
+  <div class="lg:px-6 pt-4">
+    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('/products-img/rohkem-featured.webp')] bg-cover bg-center bg-no-repeat">
+      <div class="mt-auto bg-gradient-to-t from-black/80 via-black/50 to-black/0 ps-5 py-5 md:ps-10 md:py-10">
+        <h1 class="block font-bold text-3xl md:text-5xl text-yellow-400 text-center">Rohkem</h1>
+        <p class="block text-white text-xl md:text-3xl text-center">
+          1x6 and 2x3 passive signal splitter
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End hero -->
+
+  <EurorackProductPageNav productName="rohkem" />
+
+  <!-- Content -->
+  <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+        Bill of materials for Rohkem
+      </h2>
+
+      <div class="space-y-8">
+        <p class="text-lg md:text-xl">
+          Ready to build your own Rohkem? Our comprehensive Bill of Materials (BOM) provides a detailed list of all needed components. Each part is listed to ensure you have everything required for a successful build. Use this BOM as your shopping guide to source the exact components and bring your Rohkem to life.
+        </p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <caption class="text-sm text-gray-600 text-left mb-2">
+              <span class="text-red-500">*)</span> You don't have to buy from these stores, as long as you can find the equivalent component.
+            </caption>
+            <thead>
+              <tr class="border-b border-gray-200">
+                <th class="py-3 px-4 font-semibold">Reference</th>
+                <th class="py-3 px-4 font-semibold">Value</th>
+                <th class="py-3 px-4 font-semibold">Quantity</th>
+                <th class="py-3 px-4 font-semibold">Where to buy</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr class="hover:bg-gray-50">
+                <td class="py-3 px-4">J1, J2, J3, J4, J5, J6, J7, J8</td>
+                <td class="py-3 px-4">Thonkiconn Mono 3.5mm WQP518MA</td>
+                <td class="py-3 px-4">8</td>
+                <td class="py-3 px-4">
+                  <a href="https://www.thonk.co.uk/shop/thonkiconn/" 
+                     target="_blank"
+                     class="text-yellow-600 hover:text-yellow-800">Thonk</a>
+                  <span class="text-red-500">*</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Content -->
+</Layout>

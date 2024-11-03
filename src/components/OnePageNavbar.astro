@@ -1,55 +1,101 @@
-<nav class="navbar navbar-expand-lg bg-white">
-  <div class="container-fluid">
-    <div class="navbar-brand">
-      <a class="navbar-brand" href="/">
-        <img src="/img/logo.svg" height="80" alt="Nanas Sound logo" />
+---
+const currentPath = Astro.url.pathname;
+
+// Define your navigation items
+const navItems = [
+  { path: '/', label: 'Home' },
+  { path: '/eurorack-modules', label: 'Eurorack modules' },
+  { 
+    path: 'https://cults3d.com/en/users/nanassound/3d-models', 
+    label: '3D printed parts',
+    external: true 
+  }
+];
+
+// Helper function to check if path is current
+const isCurrentPage = (path: string) => {
+  if (path === '/') {
+    return currentPath === path;
+  }
+  return currentPath.startsWith(path);
+}
+---
+<!-- ========== HEADER ========== -->
+<header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full py-7">
+  <nav class="relative max-w-7xl w-full flex flex-wrap md:grid md:grid-cols-12 basis-full items-center px-4 md:px-6 md:px-8 mx-auto">
+    <div class="md:col-span-3">
+      <!-- Logo -->
+      <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="/" aria-label="Preline">
+        <svg height="60" viewBox="0 0 1000 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+          <g transform="matrix(1,0,0,1,-1020,-1100)">
+              <rect id="NS-5"x="1020" y="1100" width="1000" height="600" style="fill:none;"/>
+              <g id="NS-51">
+                  <g transform="matrix(-4.77047,0,0,4.77047,1275.77,1680.45)">
+                      <path d="M0,-67.99C-15.993,-67.99 -28.958,-52.769 -28.958,-33.995C-28.958,-15.219 -15.993,0 0,0C15.993,0 28.958,-15.219 28.958,-33.995C28.958,-52.769 15.993,-67.99 0,-67.99" style="fill:rgb(253,209,0);"/>
+                  </g>
+                  <g transform="matrix(4.77047,0,0,4.77047,1916.96,1516.87)">
+                      <path d="M0,6.727L-5.413,6.727C-5.413,9.155 -4.617,10.986 -3.025,12.18C-1.592,13.414 0.637,14.051 3.583,14.051C9.155,14.051 13.215,12.14 13.215,6.965C13.215,5.533 12.737,4.258 11.742,3.224C10.588,2.149 8.239,1.234 4.657,0.517C1.91,-0.001 0.558,-0.836 0.558,-1.911C0.558,-2.986 1.592,-3.543 3.662,-3.543C5.413,-3.543 6.488,-3.025 6.846,-2.11C7.165,-1.274 7.961,-0.835 9.194,-0.795L12.538,-0.795C12.419,-2.985 11.583,-4.697 10.03,-5.931C8.438,-7.125 6.289,-7.722 3.582,-7.722C-1.234,-7.642 -4.816,-5.493 -4.816,-0.955C-4.776,2.349 -2.389,4.418 2.269,5.254C5.891,5.892 7.722,6.767 7.722,7.842C7.722,9.196 6.607,9.831 4.378,9.831C1.791,9.831 0.119,9.036 0,6.727M-16.002,-3.383C-13.813,-3.383 -12.697,-2.787 -12.578,-1.592C-12.578,-0.438 -13.732,0.239 -16.002,0.517C-21.335,1.035 -24.997,2.388 -25.116,7.443C-25.116,12.1 -21.613,14.449 -16.559,14.051C-10.866,13.653 -7.364,11.066 -7.364,5.254L-7.364,-1.911C-7.483,-5.812 -10.429,-7.722 -16.24,-7.722C-21.097,-7.722 -23.843,-5.812 -24.479,-1.911L-19.186,-1.911C-18.907,-2.906 -17.872,-3.384 -16.002,-3.384L-16.002,-3.383ZM-17.235,9.752C-18.907,9.752 -19.783,8.956 -19.902,7.285C-19.902,5.732 -18.827,4.737 -16.718,4.338C-15.166,4.02 -13.732,3.582 -12.499,3.065L-12.499,5.015C-12.499,8 -14.29,9.752 -17.235,9.752M-27.027,13.653L-27.027,1.274C-26.987,-4.737 -29.934,-7.722 -35.943,-7.722C-41.954,-7.722 -44.979,-4.737 -44.979,1.274L-44.979,13.653L-39.605,13.653L-39.605,0.199C-39.566,-1.99 -38.372,-3.065 -36.023,-3.065C-33.675,-3.065 -32.48,-1.99 -32.361,0.199L-32.361,11.026C-32.361,12.698 -31.485,13.534 -29.734,13.653L-27.027,13.653ZM-56.164,-3.383C-53.975,-3.383 -52.86,-2.786 -52.741,-1.592C-52.741,-0.438 -53.896,0.239 -56.164,0.517C-61.498,1.035 -65.16,2.388 -65.279,7.444C-65.279,12.101 -61.776,14.449 -56.722,14.051C-51.029,13.653 -47.526,11.066 -47.526,5.254L-47.526,-1.911C-47.646,-5.811 -50.592,-7.722 -56.403,-7.722C-61.26,-7.722 -64.006,-5.811 -64.643,-1.911L-59.349,-1.911C-59.07,-2.906 -58.035,-3.383 -56.164,-3.383M-57.398,9.752C-59.07,9.752 -59.946,8.956 -60.065,7.285C-60.065,5.732 -58.99,4.737 -56.881,4.339C-55.329,4.021 -53.896,3.582 -52.661,3.065L-52.661,5.015C-52.661,8 -54.453,9.752 -57.398,9.752M-67.19,13.654L-67.19,1.274C-67.15,-4.737 -70.097,-7.722 -76.106,-7.722C-82.117,-7.722 -85.142,-4.737 -85.142,1.274L-85.142,13.654L-79.769,13.654L-79.769,0.199C-79.729,-1.99 -78.535,-3.065 -76.187,-3.065C-73.838,-3.065 -72.644,-1.99 -72.524,0.199L-72.524,11.026C-72.524,12.698 -71.648,13.534 -69.897,13.653L-67.19,13.653L-67.19,13.654Z" style="fill:rgb(32,26,26);fill-rule:nonzero;"/>
+                  </g>
+                  <g transform="matrix(4.77047,0,0,4.77047,1476.1,1241.63)">
+                      <path d="M0,52.862C0.298,53 3.43,54.51 3.623,57.308C3.826,60.245 2.915,69.258 -1.136,71.79C-1.136,71.79 -5.092,72.811 -5.934,74.128C-6.776,75.444 -8.67,78.181 -10.513,77.497C-12.355,76.813 -13.566,75.391 -13.566,75.391C-13.566,75.391 -13.935,74.865 -13.356,73.76C-12.776,72.654 -8.101,60.475 -9.513,53.915C-10.926,47.355 -10.513,47.229 -8.25,46.861C-7.155,46.683 -5.704,46.899 -4.251,47.739L-4.252,47.755C-0.114,53.851 -6.936,66.012 -6.435,65.198C-2.112,62.691 -0.51,55.884 0,52.862ZM-83.576,52.862C-83.874,53 -87.006,54.51 -87.199,57.308C-87.401,60.245 -86.49,69.258 -82.439,71.79C-82.439,71.79 -78.484,72.811 -77.642,74.128C-76.8,75.444 -74.905,78.181 -73.063,77.497C-71.22,76.813 -70.009,75.391 -70.009,75.391C-70.009,75.391 -69.641,74.865 -70.22,73.76C-70.799,72.654 -75.475,60.475 -74.063,53.915C-72.649,47.355 -73.063,47.229 -75.325,46.861C-76.42,46.683 -77.872,46.899 -79.324,47.739L-79.323,47.755C-83.462,53.851 -76.64,66.012 -77.141,65.198C-81.463,62.691 -83.065,55.884 -83.577,52.862L-83.576,52.862ZM-53.199,15.419C-54.63,14.032 -62.273,6.838 -68.333,5.278C-68.333,5.278 -62.479,2.432 -56.143,5.215C-56.143,5.215 -60.265,-6.648 -71.777,-13.413C-71.777,-13.413 -55.786,-13.536 -50.822,-6.405C-50.822,-6.405 -46.384,-24.042 -31.465,-25.591C-31.465,-25.591 -43.199,-13.343 -38.665,-0.307C-38.665,-0.307 -27.678,-10.052 -15.357,-1.859C-15.357,-1.859 -30.515,1.136 -32.849,11.006C-32.849,11.006 -26.031,11.028 -23.812,10.467C-23.812,10.467 -27.318,14.859 -29.033,15.968C-18.163,20.706 -10.036,31.322 -7.971,44.204C-9.234,44.574 -10.391,45.082 -11.401,45.701C-15.104,31.221 -27.305,20.595 -41.788,20.595C-56.271,20.595 -68.472,31.221 -72.175,45.701C-73.186,45.082 -74.342,44.574 -75.606,44.204C-73.456,30.797 -64.741,19.845 -53.199,15.419M-66.413,60.504C-66.533,61.323 -67.293,61.889 -68.112,61.769C-68.93,61.65 -69.497,60.888 -69.378,60.07C-68.669,55.274 -67.744,49.972 -65.75,45.746C-63.616,41.221 -60.313,37.96 -54.907,37.764C-44.739,37.396 -42.621,47.71 -40.522,57.933C-38.721,66.707 -36.935,75.406 -29.849,75.237C-26.958,75.169 -24.598,73.2 -22.734,70.437C-19.942,66.297 -18.29,60.457 -17.572,56.143C-17.437,55.328 -16.665,54.777 -15.85,54.913C-15.035,55.049 -14.484,55.82 -14.62,56.635C-15.391,61.265 -17.185,67.568 -20.251,72.113C-22.618,75.625 -25.749,78.13 -29.779,78.225C-39.361,78.453 -41.398,68.534 -43.452,58.531C-45.297,49.543 -47.159,40.475 -54.801,40.753C-58.837,40.898 -61.364,43.463 -63.043,47.023C-64.862,50.88 -65.736,55.924 -66.413,60.505L-66.413,60.504Z" style="fill:rgb(32,26,26);fill-rule:nonzero;"/>
+                  </g>
+              </g>
+          </g>
+        </svg>
       </a>
+      <!-- End Logo -->
     </div>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse justify-content-end navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link p-0" href="#">
-            <p class="fs-3 mb-1">Products</p>
-          </a>
-          <p class="fs-6 lead m-0">Eurorack modules</p>
-          <p class="fs-6 lead m-0 pl-3">
-            <a class="link-underline link-underline-opacity-0" href="https://cults3d.com/en/users/nanassound/3d-models" target="_blank" rel="norefferer noopenner">
-              3D printed parts
+
+    <!-- Button Group -->
+    <div class="flex items-center gap-x-1 md:gap-x-2 ms-auto py-1 md:ps-6 md:order-3 md:col-span-3">
+      <a href="https://www.elecrow.com/marketplace/seller/profile/shop/nanas%20sound_76637" 
+         target="_blank" 
+         rel="noreferrer noopener" 
+         class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl border border-transparent bg-yellow-400 text-black hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 transition disabled:opacity-50 disabled:pointer-events-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg>
+        Shop
+      </a>
+
+      <div class="md:hidden">
+        <button type="button" 
+                class="hs-collapse-toggle size-[38px] flex justify-center items-center text-sm font-semibold rounded-xl border border-gray-200 text-black hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" 
+                id="hs-navbar-hcail-collapse" 
+                aria-expanded="false" 
+                aria-controls="hs-navbar-hcail" 
+                aria-label="Toggle navigation" 
+                data-hs-collapse="#hs-navbar-hcail">
+          <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+          <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- End Button Group -->
+
+    <!-- Collapse -->
+    <div id="hs-navbar-hcail" 
+         class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block md:w-auto md:basis-auto md:order-2 md:col-span-6" 
+         aria-labelledby="hs-navbar-hcail-collapse">
+      <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:justify-center md:items-center md:gap-y-0 md:gap-x-7 md:mt-0">
+        {navItems.map(({ path, label, external }) => (
+          <div>
+            <a 
+              href={path}
+              class:list={[
+                'inline-block text-black focus:outline-none',
+                isCurrentPage(path) 
+                  ? 'relative before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-yellow-400'
+                  : 'hover:text-gray-600 focus:text-gray-600'
+              ]}
+              aria-current={isCurrentPage(path) ? 'page' : undefined}
+              {...external ? { target: '_blank', rel: 'noreferrer noopener' } : {}}
+            >
+              {label}
             </a>
-          </p>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link py-0 pr-0 pl-3" href="https://shop.nanassound.com">
-            <p class="fs-3 lead mb-1">Shop</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link py-0 pr-0 pl-3" href="/about">
-            <p class="fs-3 lead mb-1">About</p>
-          </a>
-        </li>
-      </ul>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-
-  <style>
-    a.navbar-item {
-      color: #201a1a;
-    }
-
-    a.navbar-item:hover {
-      color: #fdd100;
-    }
-  </style>
-</nav>
+    <!-- End Collapse -->
+  </nav>
+</header>
+<!-- ========== END HEADER ========== -->

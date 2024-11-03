@@ -1,0 +1,65 @@
+---
+import "@fontsource/roboto";
+import Layout from "../../../../layouts/Layout.astro";
+import EurorackProductPageNav from "../../../../components/EurorackProductPageNav.astro";
+---
+
+<Layout title="Mini - USB-C power supply | Nanas Sound">
+  <!-- Hero -->
+  <div class="lg:px-6 pt-4">
+    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('/products-img/mini-main.webp')] bg-cover bg-center bg-no-repeat">
+      <div class="mt-auto bg-gradient-to-t from-black/80 via-black/50 to-black/0 ps-5 py-5 md:ps-10 md:py-10">
+        <h1 class="block font-bold text-3xl md:text-5xl text-yellow-400 text-center">Mini</h1>
+        <p class="block text-white text-xl md:text-3xl text-center">
+          USB-C power supply
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End hero -->
+
+  <EurorackProductPageNav productName="mini" buyLink="https://www.elecrow.com/mini-usb-c-power-supply-for-eurorack.html" />
+
+  <!-- Content -->
+  <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+        Power your Eurorack with any USB-C power source
+      </h2>
+
+      <div class="space-y-8">
+        <p class="text-lg md:text-xl">
+          Mini provides +/- 12V and 5V voltage to your Eurorack module. With a 15W USB-C power source, it can deliver up to 416mA. You can utilize a phone charger, the USB-C port on your laptop, or even a power bank to power your Eurorack modular synth system. It is particularly suitable for driving small setups or powering your DIY Eurorack module project.
+        </p>
+
+        <h3 class="text-2xl md:text-3xl font-bold">Utilization of Mini</h3>
+        <div class="space-y-4 text-lg md:text-xl">
+          <p>
+            Mini can be utilized as a standalone desktop module or connected to rails.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <img class="w-full h-auto" src="/products-img/mini-standalone.webp" alt="Mini standalone">
+            </div>
+            <div>
+              <img class="w-full h-auto" src="/products-img/mini-rails.webp" alt="Mini rails">
+            </div>
+          </div>
+          <p>
+            Additionally, you can 3D print and construct a small Eurorack case specifically designed for Mini. Learn more about it <a href="https://cults3d.com/en/3d-model/tool/mini-42-hp-eurorack-skiff-with-usb-c-power-supply" target="_blank" class="text-yellow-600 hover:text-yellow-800">here</a>.
+          </p>
+          <img class="w-full h-auto" src="/products-img/mini-case.webp" alt="Mini case">
+        </div>
+
+        <h3 class="text-2xl md:text-3xl font-bold">Technical specifications</h3>
+        <ul class="list-disc list-inside space-y-2 text-lg md:text-xl">
+          <li>Width: 6HP</li>
+          <li>Height: 3U</li>
+          <li>Number of power sockets: 4 (16 pins header)</li>
+          <li>Overcurrent protection with resettable fuse</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End Content -->
+</Layout>

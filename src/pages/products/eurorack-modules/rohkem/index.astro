@@ -1,0 +1,55 @@
+---
+import "@fontsource/roboto";
+import Layout from "../../../../layouts/Layout.astro";
+import EurorackProductPageNav from "../../../../components/EurorackProductPageNav.astro";
+---
+
+<Layout title="Rohkem - Passive signal splitter | Nanas Sound">
+  <!-- Hero -->
+  <div class="lg:px-6 pt-4">
+    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('/products-img/rohkem-featured.webp')] bg-cover bg-center bg-no-repeat">
+      <div class="mt-auto bg-gradient-to-t from-black/80 via-black/50 to-black/0 ps-5 py-5 md:ps-10 md:py-10">
+        <h1 class="block font-bold text-3xl md:text-5xl text-yellow-400 text-center">Rohkem</h1>
+        <p class="block text-white text-xl md:text-3xl text-center">
+          1x6 and 2x3 passive signal splitter
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End hero -->
+
+  <EurorackProductPageNav productName="rohkem" />
+
+  <!-- Content -->
+  <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+        Split and distribute your audio and CV signals
+      </h2>
+
+      <div class="space-y-8">
+        <p class="text-lg md:text-xl">
+          Rohkem is a straightforward Eurorack module designed to split and distribute your audio and CV signals. It offers two configurations: one input with six outputs, or two inputs with three outputs for each input.
+        </p>
+
+        <div class="space-y-4 text-lg md:text-xl">
+          <p>
+            Here's how the configuration works:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-lg md:text-xl">
+            <li>Connect one signal to jack number 1. It will be output to jacks 2, 3, 4, 6, 7, and 8.</li>
+            <li>Connect another signal to jack number 5. It will split into two sets of signals. Jack 1 will split the signal to jacks 2, 3, and 4, while jack 5 will split it to jacks 6, 7, and 8.</li>
+          </ul>
+        </div>
+
+        <h3 class="text-2xl md:text-3xl font-bold">Technical specifications</h3>
+        <ul class="list-disc list-inside space-y-2 text-lg md:text-xl">
+          <li>Width: 2HP</li>
+          <li>Height: 3U</li>
+          <li>Power consumption: 0mA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End Content -->
+</Layout>

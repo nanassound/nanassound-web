@@ -2,109 +2,74 @@
 import "@fontsource/roboto";
 import Layout from "../../../../layouts/Layout.astro";
 import EurorackProductPageNav from "../../../../components/EurorackProductPageNav.astro";
+import AttentionBanner from "../../../../components/AttentionBanner.astro";
 ---
 
 <Layout title="Uksed - 4-channel audio I/O | Nanas Sound">
-  <!-- hero -->
-  <section class="card border border-0 text-bg-light">
-    <img
-      class="img-fluid"
-      src="/products-img/uksed-product-page.webp"
-      alt="Uksed in action"
-    />
-    <div class="card-img-overlay p-0">
-      <div
-        id="case-overlay"
-        class="w-100 h-100 d-flex flex-column align-items-center justify-content-center"
-      >
-        <h1 class="display-1 text-center fw-bold">Uksed</h1>
-        <h2 class="display-4 lead text-center">
-          4-channels audio input module
-        </h2>
-        <div class="d-flex justify-content-center gap-1">
-          <p>Available as</p>
-          <h5><span class="badge bg-warning text-dark">DIY kit</span></h5>
-          <p>and</p>
-          <h5><span class="badge bg-warning text-dark">Assembled</span></h5>
-        </div>
+  <!-- Hero -->
+  <div class="lg:px-6 pt-4">
+    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('/products-img/uksed-product-page.webp')] bg-cover bg-center bg-no-repeat">
+      <div class="mt-auto bg-gradient-to-t from-black/80 via-black/50 to-black/0 ps-5 py-5 md:ps-10 md:py-10">
+        <h1 class="block font-bold text-3xl md:text-5xl text-yellow-400 text-center">Uksed</h1>
+        <p class="block text-white text-xl md:text-3xl text-center">
+          4 channel audio input module
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+  <!-- End hero -->
 
-  <EurorackProductPageNav productName="uksed"  />
+  <AttentionBanner text="We are redesigning the schematic of Uksed. The new version will be available soon." />
 
-  <section class="container py-3 py-lg-5">
-    <div class="row">
-      <div class="col-12 col-lg-8 offset-lg-2">
-        <h2 class="display-2 text-center">
-          Bring external audio to your Eurorack system
-        </h2>
-        <article class="my-5">
-          <p class="fs-4">
-            Unlock new creative possibilities with <b>Uksed</b>, the 4-channel mono input module that seamlessly integrates external audio into your Eurorack setup. Whether it's the output from other synthesizers, samplers, music players, or any sound source, Uksed elevates your audio to Eurorack signal levels, ready for endless creative processing.
-          </p>
-        </article>
-        <h2 class="display-5">Why choose Uksed?</h2>
-        <article class="my-5">
-          <p class="fs-4">
+  <EurorackProductPageNav productName="uksed" />
+
+  <!-- Content -->
+  <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+        Bring external audio to your Eurorack system
+      </h2>
+
+      <div class="space-y-8">
+        <p class="text-lg md:text-xl">
+          Unlock new creative possibilities with Uksed, the 4 channel mono input module that seamlessly integrates external audio into your Eurorack setup. Whether it's the output from other synthesizers, samplers, music players, or any sound source, Uksed elevates your audio to Eurorack signal levels, ready for endless creative processing.
+        </p>
+
+        <h3 class="text-2xl md:text-3xl font-bold">Why choose Uksed?</h3>
+        <div class="space-y-4 text-lg md:text-xl">
+          <p>
             Eurorack systems operate at higher signal levels, typically between -5V and 5V (10V peak to peak), compared to external audio gear like synthesizers and drum machines, which often produce signals around 3.5V peak to peak.
           </p>
-          <p class="fs-4">
+          <p>
             Electric instruments with passive pickups, like guitars and basses, even produce lower-level signals in the millivolts range.
           </p>
-          <p class="fs-4">
-            <b>Uksed</b> bridges this gap by amplifying these signals to Eurorack levels, allowing you to blend and manipulate sounds from external devices with your Eurorack modules.
+          <p>
+            Uksed bridges this gap by amplifying these signals to Eurorack levels, allowing you to blend and manipulate sounds from external devices with your Eurorack modules.
           </p>
-        </article>
-        <h2 class="display-5">See Uksed in action</h2>
-        <article class="my-5">
-          <p class="fs-4">
-            Watch how <b>Uksed</b> transforms the Arturia MicroFreak's sound, layering and enhancing it through the Doepfer A-111-6 synthesizer module. In this video, <b>Uksed</b> amplifies MicroFreak's signal to the Eurorack level, showcasing the vast potential for creative sound processing.
+        </div>
+
+        <h3 class="text-2xl md:text-3xl font-bold">See Uksed in action</h3>
+        <div class="space-y-4">
+          <p class="text-lg md:text-xl">
+            Watch how Uksed transforms the Arturia MicroFreak's sound, layering and enhancing it through the Doepfer A-111-6 synthesizer module. In this video, Uksed amplifies MicroFreak's signal to the Eurorack level, showcasing the vast potential for creative sound processing.
           </p>
-          <div class="embed-container">
+          <div class="relative pt-[56.25%]">
             <iframe
+              class="absolute inset-0 w-full h-full rounded-xl"
               src="https://www.youtube.com/embed/QRJPK3TgZcg"
-              allowfullscreen></iframe>
+              allowfullscreen>
+            </iframe>
           </div>
-        </article>
-        <h2 class="display-5">Technical specifications</h2>
-        <article class="my-5">
-          <ul>
-            <li class="fs-4">Width: 8 HP</li>
-            <li class="fs-4">Depth: 27mm (including power connector)</li>
-            <li class="fs-4">Power consumption +12V -&gt; 0.5mA, -12V -&gt; 0.5mA</li>
-            <li class="fs-4">3D printed panel with 2mm PLA+ filament</li>
-            <li class="fs-4">Designed in Tallinn, Estonia</li>
-          </ul>
-        </article>
+        </div>
+
+        <h3 class="text-2xl md:text-3xl font-bold">Technical specifications</h3>
+        <ul class="list-disc list-inside space-y-2 text-lg md:text-xl">
+          <li>Width: 8 HP</li>
+          <li>Depth: 27mm (including power connector)</li>
+          <li>Power consumption +12V → 0.5mA, -12V → 0.5mA</li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+  <!-- End Content -->
 </Layout>
-
-<style>
-  #case-overlay {
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0)
-    );
-  }
-
-  .embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-  }
-  .embed-container iframe,
-  .embed-container object,
-  .embed-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
