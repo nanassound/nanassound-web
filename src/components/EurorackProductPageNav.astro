@@ -26,14 +26,16 @@ const navItems = [
         {label}
       </a>
     ))}
-    {buyLink && (
+  </nav>
+  {buyLink && (
+    <nav class="flex justify-center gap-x-4">
       <a
         href={buyLink}
-        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-lime-400 border border-transparent text-black hover:bg-lime-500"
+        class="py-2 px-3 mt-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-lime-400 border border-transparent text-black hover:bg-lime-500"
         target="_blank"
       >
         Buy assembled module
       </a>
-    )}
-  </nav>
+    </nav>
+  )}
 </div>
