@@ -14,7 +14,6 @@ export default defineConfig({
   integrations: [mdx({
     drafts: true
   }), tailwind()],
-  output: "server",
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
