@@ -5,21 +5,19 @@ import EurorackProductPageNav from "../../../../components/EurorackProductPageNa
 import AttentionBanner from "../../../../components/AttentionBanner.astro";
 ---
 
-<Layout title="Uksed - 4-channel audio I/O | Nanas Sound">
+<Layout title="Uksed - 2 channels audio I/O | Nanas Sound">
   <!-- Hero -->
   <div class="lg:px-6 pt-4">
     <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('/products-img/uksed-product-page.webp')] bg-cover bg-center bg-no-repeat">
       <div class="mt-auto bg-gradient-to-t from-black/80 via-black/50 to-black/0 ps-5 py-5 md:ps-10 md:py-10">
         <h1 class="block font-bold text-3xl md:text-5xl text-yellow-400 text-center">Uksed</h1>
         <p class="block text-white text-xl md:text-3xl text-center">
-          4 channel audio input module
+          2 channels audio input module
         </p>
       </div>
     </div>
   </div>
   <!-- End hero -->
-
-  <AttentionBanner text="We are redesigning the schematic of Uksed. The new version will be available soon." />
 
   <EurorackProductPageNav productName="uksed" />
 
@@ -32,41 +30,21 @@ import AttentionBanner from "../../../../components/AttentionBanner.astro";
 
       <div class="space-y-8">
         <p class="text-lg md:text-xl">
-          Unlock new creative possibilities with Uksed, the 4 channel mono input module that seamlessly integrates external audio into your Eurorack setup. Whether it's the output from other synthesizers, samplers, music players, or any sound source, Uksed elevates your audio to Eurorack signal levels, ready for endless creative processing.
+          Meet Uksed: the 2-channel input module that lets you integrate guitars, synths, samplers, or any audio source directly into your Eurorack system. No more level-matching headaches—just plug in, amplify, and start sculpting sounds.
         </p>
 
-        <h3 class="text-2xl md:text-3xl font-bold">Why choose Uksed?</h3>
+        <h3 class="text-2xl md:text-3xl font-bold">Why Eurorack needs a translator</h3>
         <div class="space-y-4 text-lg md:text-xl">
           <p>
-            Eurorack systems operate at higher signal levels, typically between -5V and 5V (10V peak to peak), compared to external audio gear like synthesizers and drum machines, which often produce signals around 3.5V peak to peak.
+            Most synths, drum machines, or music players send signals too quiet for Eurorack’s hungry (-5V to +5V) circuitry. Guitars or basses? Even quieter—we’re talking millivolts. Uksed solves this. It boosts any external audio to Eurorack-ready levels, so you can process, layer, or warp it with your favorite modules.
           </p>
-          <p>
-            Electric instruments with passive pickups, like guitars and basses, even produce lower-level signals in the millivolts range.
-          </p>
-          <p>
-            Uksed bridges this gap by amplifying these signals to Eurorack levels, allowing you to blend and manipulate sounds from external devices with your Eurorack modules.
-          </p>
-        </div>
-
-        <h3 class="text-2xl md:text-3xl font-bold">See Uksed in action</h3>
-        <div class="space-y-4">
-          <p class="text-lg md:text-xl">
-            Watch how Uksed transforms the Arturia MicroFreak's sound, layering and enhancing it through the Doepfer A-111-6 synthesizer module. In this video, Uksed amplifies MicroFreak's signal to the Eurorack level, showcasing the vast potential for creative sound processing.
-          </p>
-          <div class="relative pt-[56.25%]">
-            <iframe
-              class="absolute inset-0 w-full h-full rounded-xl"
-              src="https://www.youtube.com/embed/QRJPK3TgZcg"
-              allowfullscreen>
-            </iframe>
-          </div>
         </div>
 
         <h3 class="text-2xl md:text-3xl font-bold">Technical specifications</h3>
         <ul class="list-disc list-inside space-y-2 text-lg md:text-xl">
-          <li>Width: 8 HP</li>
-          <li>Depth: 27mm (including power connector)</li>
-          <li>Power consumption +12V → 0.5mA, -12V → 0.5mA</li>
+          <li>Width: 6 HP</li>
+          <li>Depth: 24mm (including power connector)</li>
+          <li>Power consumption +12V → 0.5mA, -12V → 0.5mA (Need checking)</li>
         </ul>
       </div>
     </div>
