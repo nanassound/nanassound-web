@@ -1,76 +1,212 @@
 ---
 import "@fontsource/roboto";
 import Layout from "../layouts/Layout.astro";
-import AboutMeBox from "../components/AboutMeBox.astro";
 ---
 
-<Layout title="Nanas Sound | Synthesizers and Eurorack modules">
-  <!-- Hero -->
-  <div class="px-4 lg:px-6 lg:px-8 pt-4 pb-10">
-    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('/products-img/mini-main.webp')] bg-cover bg-bottom bg-no-repeat">
-      <div class="mt-auto ps-5 py-5 md:ps-10 md:py-10">
-        <span class="block font-bold text-3xl md:text-5xl text-yellow-400 text-center">Mini - Power Supply</span>
-        <span class="block text-dark text-xl md:text-3xl text-center">Standalone / 3U rack / Inside the case</span>
-        <div class="mt-5 flex gap-x-2 justify-center">
-          <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-yellow-400 border border-transparent text-black hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 disabled:opacity-50 disabled:pointer-events-none" href="/products/eurorack-modules/mini">
-            Learn more
-          </a>
-          <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm text-dark font-medium rounded-xl border border-yellow-400 hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 disabled:opacity-50 disabled:pointer-events-none plausible-event-name=Buy+now+Mini" href="https://www.elecrow.com/mini-usb-c-power-supply-for-eurorack.html" target="_blank">
-            Buy now
-          </a>
+<Layout title="Nanas Sound | Professional Audio Solutions & Eurorack Innovation">
+  <!-- Hero Section -->
+  <div class="relative">
+    <div class="h-[30rem] md:h-[calc(100vh-64px)] flex flex-col bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 bg-[url('/img/hero-1.jpg')] bg-cover bg-center bg-no-repeat bg-blend-overlay">
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative z-10 mt-auto px-4 py-8 md:px-8 md:py-12">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="block font-bold text-4xl md:text-6xl text-white mb-4">
+            Professional Audio Solutions & 
+            <span class="text-yellow-400">Eurorack Innovation</span>
+          </h1>
+          <p class="block text-white text-xl md:text-2xl mb-8 opacity-90">
+            Custom audio applications, MIDI controllers, and modular synthesizer solutions
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a class="py-3 px-6 inline-flex items-center justify-center gap-x-2 text-lg font-medium rounded-xl bg-yellow-400 border border-transparent text-black hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 transition-colors" href="/products">
+              Explore Products
+            </a>
+            <a class="py-3 px-6 inline-flex items-center justify-center gap-x-2 text-lg text-white font-medium rounded-xl border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black focus:outline-none transition-colors" href="/services">
+              Get Custom Solutions
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- End hero -->
+  <!-- End Hero -->
 
-  <!-- Features -->
-  <div class="px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-yellow-200">
-    <!-- Title -->
-    <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-3xl lg:text-4xl text-dark-800 font-bold">
-        Compact &amp; Portable
-      </h2>
-      <p class="mt-3 text-gray-800">
-        Play electronic music instruments anywhere.
-      </p>
-    </div>
-    <!-- End Title -->
-  </div>
-  <!-- End Features -->
+  <!-- Featured Products Section -->
+  <div class="px-4 py-16 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Featured Products
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Professional-grade Eurorack modules and accessories designed for musicians and sound designers.
+        </p>
+      </div>
 
-  <!-- Two additional columns -->
-  <div class="grid grid-cols-1 gap-4 px-4 md:grid-cols-2 lg:px-6 lg:px-8 pt-4 pb-10">
-    <div class="bg-neutral-50 p-5">
-      <div class="mt-auto rounded-b-2xl ps-5 py-5 md:ps-10 md:py-10">
-        <span class="block font-bold text-xl md:text-3xl text-dark-800 text-center">Mini - 3D printed 42HP skiff</span>
-        <span class="block text-dark text-lg md:text-xl text-center">Build your own Mini Eurorack case</span>
-        <div class="mt-5 flex gap-x-2 justify-center">
-          <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-yellow-400 border border-transparent text-black hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 disabled:opacity-50 disabled:pointer-events-none" href="https://cults3d.com/en/3d-model/tool/mini-42-hp-eurorack-skiff-with-usb-c-power-supply" target="_blank">
-            Learn more
-          </a>
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <!-- Mini Power Supply -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <div class="relative">
+            <img src="/products-img/mini-main.webp" alt="Mini Power Supply" class="w-full h-48 object-cover">
+            <div class="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium">
+              Featured
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Mini Power Supply</h3>
+            <p class="text-gray-600 mb-4">USB-C powered Eurorack power supply for standalone, 3U rack, or case integration.</p>
+            <div class="flex gap-3">
+              <a href="/products/eurorack-modules/mini" class="flex-1 py-2 px-4 bg-yellow-400 text-black text-center rounded-lg font-medium hover:bg-yellow-500 transition-colors">
+                Learn More
+              </a>
+              <a href="https://www.elecrow.com/mini-usb-c-power-supply-for-eurorack.html" target="_blank" class="py-2 px-4 border border-yellow-400 text-yellow-600 rounded-lg font-medium hover:bg-yellow-400 hover:text-black transition-colors">
+                Buy Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Uksed Module -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="/products-img/uksed-main.webp" alt="Uksed Audio Input Module" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Uksed</h3>
+            <p class="text-gray-600 mb-4">4-channel audio input module for professional audio routing and processing.</p>
+            <a href="/products/eurorack-modules/uksed" class="block w-full py-2 px-4 bg-yellow-400 text-black text-center rounded-lg font-medium hover:bg-yellow-500 transition-colors">
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <!-- Rohkem Module -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="/products-img/rohkem-main.webp" alt="Rohkem Signal Splitter" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Rohkem</h3>
+            <p class="text-gray-600 mb-4">1x6 and 2x3 passive signal splitter for flexible audio routing.</p>
+            <a href="/products/eurorack-modules/rohkem" class="block w-full py-2 px-4 bg-yellow-400 text-black text-center rounded-lg font-medium hover:bg-yellow-500 transition-colors">
+              Learn More
+            </a>
+          </div>
         </div>
       </div>
-      <img src="/products-img/mini-skiff.webp" alt="Mini - 42HP Skiff" class="w-auto h-auto mx-auto rounded-xl">
+
+      <!-- View All Products Button -->
+      <div class="text-center">
+        <a href="/products" class="inline-flex items-center gap-2 py-3 px-6 bg-gray-900 text-white rounded-xl font-medium hover:bg-gray-800 transition-colors">
+          View All Products
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
     </div>
-    <div class="bg-neutral-50 p-5">
-      <div class="mt-auto rounded-b-2xl ps-5 py-5 md:ps-10 md:py-10">
-        <span class="block font-bold text-xl md:text-3xl text-dark-800 text-center">3D printed 84HP case</span>
-        <span class="block text-dark text-lg md:text-xl text-center">Fit for any 84HP Eurorack rails</span>
-        <div class="mt-5 flex gap-x-2 justify-center">
-          <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-yellow-400 border border-transparent text-black hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 disabled:opacity-50 disabled:pointer-events-none" href="https://cults3d.com/en/3d-model/tool/eurorack-case-84hp-rails-are-still-needed-nanassound" target="_blank">
-            Learn more
-          </a>
+  </div>
+  <!-- End Featured Products -->
+
+  <!-- Why Choose Us Section -->
+  <div class="px-4 py-16 sm:px-6 lg:px-8 mx-auto bg-yellow-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Why Choose Nanas Sound?
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Combining software engineering expertise with audio industry knowledge to deliver exceptional solutions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Software Expertise</h3>
+          <p class="text-gray-600">Professional software engineering background ensures robust, scalable solutions.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Open Source</h3>
+          <p class="text-gray-600">Committed to open-source principles, sharing knowledge and fostering innovation.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Quality Assurance</h3>
+          <p class="text-gray-600">Rigorous testing and quality control for reliable, professional-grade products.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Custom Solutions</h3>
+          <p class="text-gray-600">Tailored development services to meet your specific audio and music production needs.</p>
         </div>
       </div>
-      <img src="/products-img/printthiscase@2x.webp" alt="84HP Eurorack case" class="w-auto h-auto mx-auto rounded-xl">
     </div>
   </div>
-  <!-- End Two additional columns -->
+  <!-- End Why Choose Us -->
 
-  <!-- About me -->
-  <div class="px-4 mb-10 sm:px-6 lg:px-8 mx-auto">
-    <AboutMeBox />
+  <!-- Services Section -->
+  <div class="px-4 py-16 sm:px-6 lg:px-8 mx-auto bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Professional Audio Services
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          From custom audio applications to hardware integration, we deliver innovative solutions for musicians and audio professionals.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Custom Audio Applications -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Custom Audio Applications</h3>
+          <p class="text-gray-600 mb-6">
+            Develop bespoke audio processing software, VST plugins, and music production tools tailored to your specific needs.
+          </p>
+          <a href="/services" class="text-yellow-600 hover:text-yellow-700 font-medium">Learn more →</a>
+        </div>
+
+        <!-- MIDI Controller Solutions -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">MIDI Controller Development</h3>
+          <p class="text-gray-600 mb-6">
+            Design and build custom MIDI controllers, hardware interfaces, and control surfaces for your studio workflow.
+          </p>
+          <a href="/services" class="text-yellow-600 hover:text-yellow-700 font-medium">Learn more →</a>
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- End About me -->
+  <!-- End Services -->
 </Layout>

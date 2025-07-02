@@ -1,5 +1,5 @@
 ---
-import OnePageNavbar from "../components/OnePageNavbar.astro";
+import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 
 export interface Props {
@@ -52,7 +52,7 @@ const socialImageURL = new URL(image, Astro.site);
     <script defer data-domain="nanassound.com" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
   </head>
   <body>
-    <OnePageNavbar />
+    <Navbar />
     <slot />
     <Footer />
 

@@ -1,0 +1,233 @@
+---
+import "@fontsource/roboto";
+import Layout from "../../layouts/Layout.astro";
+
+const printedParts = [
+	{
+		title: "Mini - 42HP Skiff",
+		description: "3D printed Eurorack case with integrated USB-C power supply mount",
+		image: "/products-img/mini-skiff.webp",
+		downloadLink: "https://cults3d.com/en/3d-model/tool/mini-42-hp-eurorack-skiff-with-usb-c-power-supply",
+		price: "Free Download",
+		printTime: "~8 hours",
+		material: "PLA/PETG"
+	},
+	{
+		title: "84HP Eurorack Case",
+		description: "Fit for any 84HP Eurorack rails - perfect for larger modular setups",
+		image: "/products-img/printthiscase@2x.webp",
+		downloadLink: "https://cults3d.com/en/3d-model/tool/eurorack-case-84hp-rails-are-still-needed-nanassound",
+		price: "Free Download",
+		printTime: "~12 hours",
+		material: "PLA/PETG"
+	},
+	{
+		title: "Module Stand",
+		description: "Adjustable stand for testing Eurorack modules during development",
+		image: "/products-img/mini-case.webp",
+		downloadLink: "#coming-soon",
+		price: "Coming Soon",
+		printTime: "~3 hours",
+		material: "PLA"
+	},
+	{
+		title: "Custom Knobs Set",
+		description: "Collection of different knob styles for DIY projects",
+		image: "/products-img/mini-rails.webp",
+		downloadLink: "#coming-soon",
+		price: "Coming Soon",
+		printTime: "~2 hours",
+		material: "PLA"
+	}
+]
+---
+
+<Layout title="DIY Parts | Nanas Sound">
+  <!-- Breadcrumb -->
+  <div class="px-4 py-4 sm:px-6 lg:px-8 mx-auto bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <nav class="text-sm text-gray-600">
+        <a href="/" class="hover:text-yellow-600">Home</a> / 
+        <a href="/products" class="hover:text-yellow-600">Products</a> / 
+        <span class="text-gray-900">DIY Parts</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="px-4 py-16 sm:px-6 lg:px-8 mx-auto bg-gradient-to-br from-green-900 via-green-800 to-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+        DIY Parts
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+        Eurorack cases, enclosures, and accessories. Download STL files for your 3D printer or order printed parts.
+      </p>
+    </div>
+  </div>
+
+  <!-- Products Section -->
+  <div class="px-4 py-16 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Available Downloads
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          High-quality STL files designed for reliability and easy printing on most consumer 3D printers.
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        {printedParts.map((part) => (
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="relative">
+              <img src={part.image} alt={part.title} class="w-full h-48 object-cover">
+              <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                {part.price}
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{part.title}</h3>
+              <p class="text-gray-600 mb-4">{part.description}</p>
+              
+              <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                <div class="bg-gray-50 rounded-lg p-3">
+                  <span class="text-gray-500">Print Time:</span>
+                  <div class="font-medium text-gray-900">{part.printTime}</div>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-3">
+                  <span class="text-gray-500">Material:</span>
+                  <div class="font-medium text-gray-900">{part.material}</div>
+                </div>
+              </div>
+              
+              {part.downloadLink === "#coming-soon" ? (
+                <div class="flex gap-3">
+                  <button disabled class="flex-1 py-3 px-4 bg-gray-200 text-gray-500 text-center rounded-lg font-medium cursor-not-allowed">
+                    Coming Soon
+                  </button>
+                  <a href="/contact" class="py-3 px-4 border border-yellow-400 text-yellow-600 rounded-lg font-medium hover:bg-yellow-400 hover:text-black transition-colors">
+                    Get Notified
+                  </a>
+                </div>
+              ) : (
+                <a href={part.downloadLink} target="_blank" class="inline-flex items-center gap-2 w-full py-3 px-4 bg-green-500 text-white text-center rounded-lg font-medium hover:bg-green-600 transition-colors">
+                  Download STL
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Print Services -->
+      <div class="bg-green-50 rounded-xl p-8 mb-16">
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Don't Have a 3D Printer?</h3>
+          <p class="text-gray-600">I can print and ship parts to you, or recommend trusted printing services.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Custom Printing</h4>
+            <p class="text-gray-600">I can print parts with professional-grade materials and ship worldwide</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Quality Assured</h4>
+            <p class="text-gray-600">All printed parts are tested for fit and finish before shipping</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Support Included</h4>
+            <p class="text-gray-600">Assembly instructions and technical support for all printed parts</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Printing Guidelines -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Printing Guidelines
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+          Recommended settings and materials for best results with these designs.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-lg font-bold text-black">0.2</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Layer Height</h3>
+            <p class="text-gray-600">0.2mm for optimal surface finish</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-lg font-bold text-black">20%</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Infill</h3>
+            <p class="text-gray-600">20% infill for structural parts</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-lg font-bold text-black">3</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Perimeters</h3>
+            <p class="text-gray-600">3 perimeters for strength</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-sm font-bold text-black">PLA+</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Material</h3>
+            <p class="text-gray-600">PLA+ or PETG recommended</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="bg-yellow-50 rounded-xl p-8 text-center">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Need a Custom Design?</h3>
+        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Looking for a specific enclosure or part that's not available? I can design custom 3D printable solutions for your project.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/services" class="inline-flex items-center gap-2 py-3 px-6 bg-yellow-400 text-black rounded-xl font-medium hover:bg-yellow-500 transition-colors">
+            Request Custom Design
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+          <a href="/contact" class="inline-flex items-center gap-2 py-3 px-6 border border-gray-300 text-gray-700 rounded-xl font-medium hover:bg-gray-50 transition-colors">
+            Get Printing Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout> 

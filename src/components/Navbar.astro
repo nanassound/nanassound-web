@@ -1,7 +1,72 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="container">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
+<nav class="flex flex-wrap items-center justify-between w-full py-4 px-4 md:px-6 lg:px-8" role="navigation" aria-label="main navigation">
+  <!-- Logo -->
+  <div class="flex items-center">
+    <a class="flex items-center" href="/">
+      <img
+        src="/img/logo.svg"
+        width="100"
+        height="100"
+        alt="Nanas Sound logo"
+      />
+    </a>
+  </div>
+
+  <!-- Desktop Menu -->
+  <div class="hidden md:flex items-center space-x-8">
+    <a class="navbar-item" href="/">Home</a>
+    <!-- Products Dropdown -->
+    <div class="relative group">
+      <button class="navbar-item navbar-dropdown-toggle flex items-center gap-1" id="products-dropdown">
+        Products
+        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="absolute top-full left-0 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <div class="py-2">
+          <a href="/products/eurorack-modules" class="navbar-dropdown-item px-4 py-3 hover:bg-gray-50">
+            <div class="font-medium text-gray-900">Eurorack Modules</div>
+            <div class="text-sm text-gray-500">Hardware synthesizer components</div>
+          </a>
+          <a href="/products/softwares" class="navbar-dropdown-item px-4 py-3 hover:bg-gray-50">
+            <div class="font-medium text-gray-900">Software</div>
+            <div class="text-sm text-gray-500">Audio applications & plugins</div>
+          </a>
+          <a href="/products/3d-printed-parts" class="navbar-dropdown-item px-4 py-3 hover:bg-gray-50">
+            <div class="font-medium text-gray-900">DIY Parts</div>
+            <div class="text-sm text-gray-500">Cases, enclosures & accessories</div>
+          </a>
+          <hr class="my-2">
+          <a href="/products" class="navbar-dropdown-item flex items-center gap-3 px-4 py-3 hover:bg-yellow-50">
+            <svg class="w-4 h-4 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+            <div class="font-medium text-yellow-600">View All Products</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <a class="navbar-item" href="/services">Services</a>
+    <a class="navbar-item" href="/about">About</a>
+    <a class="navbar-item" href="/contact">Contact</a>
+  </div>
+
+  <!-- Mobile Menu Button -->
+  <button
+    type="button"
+    class="md:hidden flex items-center justify-center w-8 h-8 text-gray-700 hover:text-yellow-400 focus:outline-none focus:text-yellow-400"
+    aria-label="Toggle navigation"
+    id="mobile-menu-button"
+  >
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+
+  <!-- Mobile Menu -->
+  <div class="md:hidden fixed inset-0 z-50 bg-white transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-menu">
+    <div class="flex items-center justify-between p-4 border-b border-gray-200">
+      <a href="/">
         <img
           src="/img/logo.svg"
           width="28"
@@ -9,59 +74,197 @@
           alt="Nanas Sound logo"
         />
       </a>
-
-      <a
-        role="button"
-        class="navbar-burger"
-        aria-label="menu"
-        aria-expanded="false"
-        data-target="navbarMainMenu"
+      <button
+        type="button"
+        class="flex items-center justify-center w-8 h-8 text-gray-700 hover:text-yellow-400 focus:outline-none focus:text-yellow-400"
+        id="mobile-menu-close"
       >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
     </div>
-
-    <div id="navbarMainMenu" class="navbar-menu">
-      <div class="navbar-end">
-        <a class="navbar-item" href="/">Home</a>
-        <a class="navbar-item" href="/music">Music</a>
-        <a class="navbar-item">About</a>
+    <div class="flex flex-col p-4 space-y-4">
+      <a class="navbar-item-mobile" href="/">Home</a>
+      <!-- Products Mobile Menu -->
+      <div class="space-y-2">
+        <button class="navbar-item-mobile mobile-dropdown-toggle w-full flex items-center justify-between" id="mobile-products-dropdown">
+          Products
+          <svg class="w-4 h-4 transition-transform duration-200" id="mobile-products-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="mobile-dropdown-content hidden pl-4 space-y-2" id="mobile-products-menu">
+          <a class="navbar-item-mobile-sub" href="/products/eurorack-modules">
+            Eurorack Modules
+          </a>
+          <a class="navbar-item-mobile-sub" href="/products/softwares">
+            Software
+          </a>
+          <a class="navbar-item-mobile-sub" href="/products/3d-printed-parts">
+            DIY Parts
+          </a>
+          <a class="navbar-item-mobile-sub" href="/products">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+              <span class="text-yellow-600 font-medium">View All Products</span>
+            </div>
+          </a>
+        </div>
       </div>
+      <a class="navbar-item-mobile" href="/services">Services</a>
+      <a class="navbar-item-mobile" href="/about">About</a>
+      <a class="navbar-item-mobile" href="/contact">Contact</a>
     </div>
   </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="md:hidden fixed inset-0 z-40 bg-black bg-opacity-50 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out" id="mobile-menu-overlay"></div>
 </nav>
 
 <style>
-	.navbar-item a {
+	.navbar-item {
 		color: #201a1a;
+		font-weight: 500;
+		padding: 0.5rem 0.75rem;
+		border-radius: 0.5rem;
+		transition: all 0.2s ease;
+		text-decoration: none;
 	}
 
-	.navbar-item a:hover {
+	.navbar-item:hover {
 		color: #fdd100;
+		background-color: rgba(253, 209, 0, 0.1);
+	}
+
+	.navbar-item-mobile {
+		color: #201a1a;
+		font-weight: 500;
+		padding: 0.75rem 0;
+		border-bottom: 1px solid #e5e7eb;
+		transition: color 0.2s ease;
+		text-decoration: none;
+	}
+
+	.navbar-item-mobile:hover {
+		color: #fdd100;
+	}
+
+	.navbar-item-mobile:last-child {
+		border-bottom: none;
+	}
+
+	.navbar-item-mobile-sub {
+		color: #6b7280;
+		font-weight: 400;
+		padding: 0.5rem 0;
+		border-bottom: 1px solid #f3f4f6;
+		transition: color 0.2s ease;
+		text-decoration: none;
+		display: block;
+	}
+
+	.navbar-item-mobile-sub:hover {
+		color: #fdd100;
+	}
+
+	.navbar-item-mobile-sub:last-child {
+		border-bottom: none;
+	}
+
+	.navbar-dropdown-toggle {
+		cursor: pointer;
+		border: none;
+		background: none;
+		text-align: left;
+	}
+
+	.navbar-dropdown-item {
+		text-decoration: none;
+		display: block;
+		transition: background-color 0.2s ease;
+	}
+
+	.mobile-dropdown-toggle {
+		text-align: left;
+		background: none;
+		border: none;
+	}
+
+	.mobile-dropdown-content.show {
+		display: block !important;
+	}
+
+	.mobile-dropdown-icon-rotated {
+		transform: rotate(180deg);
+	}
+
+	/* Mobile menu states */
+	.mobile-menu-open {
+		transform: translateX(0) !important;
+	}
+
+	.mobile-overlay-visible {
+		opacity: 1 !important;
+		pointer-events: auto !important;
 	}
 </style>
 
 <script>
-  window.document.addEventListener("DOMContentLoaded", () => {
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(
-      document.querySelectorAll(".navbar-burger"),
-      0
-    );
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenuClose = document.getElementById("mobile-menu-close");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
 
-    // Add a click event on each of them
-    $navbarBurgers.forEach((el) => {
-      el.addEventListener("click", () => {
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
+    function openMobileMenu() {
+      mobileMenu?.classList.add("mobile-menu-open");
+      mobileMenuOverlay?.classList.add("mobile-overlay-visible");
+      document.body.style.overflow = "hidden";
+    }
 
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle("is-active");
-        $target?.classList?.toggle("is-active");
-      });
+    function closeMobileMenu() {
+      mobileMenu?.classList.remove("mobile-menu-open");
+      mobileMenuOverlay?.classList.remove("mobile-overlay-visible");
+      document.body.style.overflow = "";
+    }
+
+    mobileMenuButton?.addEventListener("click", openMobileMenu);
+    mobileMenuClose?.addEventListener("click", closeMobileMenu);
+    mobileMenuOverlay?.addEventListener("click", closeMobileMenu);
+
+    // Mobile dropdown functionality
+    const mobileProductsDropdown = document.getElementById("mobile-products-dropdown");
+    const mobileProductsMenu = document.getElementById("mobile-products-menu");
+    const mobileProductsIcon = document.getElementById("mobile-products-icon");
+
+    mobileProductsDropdown?.addEventListener("click", () => {
+      const isHidden = mobileProductsMenu?.classList.contains("hidden");
+      
+      if (isHidden) {
+        mobileProductsMenu?.classList.remove("hidden");
+        mobileProductsMenu?.classList.add("show");
+        mobileProductsIcon?.classList.add("mobile-dropdown-icon-rotated");
+      } else {
+        mobileProductsMenu?.classList.add("hidden");
+        mobileProductsMenu?.classList.remove("show");
+        mobileProductsIcon?.classList.remove("mobile-dropdown-icon-rotated");
+      }
+    });
+
+    // Close menu when clicking on a link
+    const mobileLinks = mobileMenu?.querySelectorAll("a");
+    mobileLinks?.forEach(link => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    // Close menu on escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeMobileMenu();
+      }
     });
   });
 </script>

@@ -5,48 +5,92 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="About | Nanas Sound">
   <div class="px-4 sm:px-6 lg:px-8 pb-10">
-    <div class="max-w-4xl mx-auto">
-      <h1 class="text-4xl md:text-5xl font-bold text-center my-10">Our story: Nanas Sound</h1>
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold text-center my-10">What is Nanas Sound?</h1>
       
-      <div class="space-y-6 text-lg text-gray-800">
-        <p>
-          <b>Nanas Sound</b> began in 2021 as a passionate music project by Asep Bagja, a software engineer and electronic music enthusiast, in Tallinn, Estonia. Originally, Asep started Nanas Sound to release his own music, which you can now enjoy on
-          <a href="https://music.youtube.com/channel/UC8C4fWKZJvALsC_9I0M5kFg?si=G4kNmx5pyZQO4CTo" 
-             class="text-yellow-600 hover:text-yellow-800" 
-             target="_blank">YouTube Music</a>,
-          <a href="https://www.youtube.com/@bepitulaz" 
-             class="text-yellow-600 hover:text-yellow-800" 
-             target="_blank">YouTube</a>,
-          <a href="https://open.spotify.com/artist/3ZluC2z0z35Pdv8Aky7qMx?si=zXISVL_HRmyMgxuAoYnzeg" 
-             class="text-yellow-600 hover:text-yellow-800" 
-             target="_blank">Spotify</a>, and
-          <a href="https://music.apple.com/ee/artist/asep-bagja/1650464458" 
-             class="text-yellow-600 hover:text-yellow-800" 
-             target="_blank">Apple Music</a>.
-        </p>
+      <!-- Mission Statement -->
+      <div class="bg-yellow-50 rounded-xl p-8 mb-12">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-xl md:text-2xl text-gray-800 mb-4">
+            <strong>Nanas Sound</strong> is a company owned by Asep Bagja, a software engineer based in Tallinn, Estonia. Our mission is to make electronic music instruments that can be played anywhere, anytime.
+          </p>
+          <p class="text-lg text-gray-600">
+            We ❤️ open-source software and hardware.
+          </p>
+        </div>
+      </div>
 
-        <p>
-          Driven by a fascination with modular synthesizers, Asep expanded Nanas Sound beyond music production. He began designing and building Eurorack modules, transforming his hobby into a brand. Today, Nanas Sound proudly offers DIY Eurorack modules and 3D-printed synth parts for fellow enthusiasts and creators.
-        </p>
+      <!-- Story Section with Images -->
+      <div class="lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center mb-16">
+        <div class="lg:col-span-7 space-y-6 text-lg text-gray-800">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+          
+          <p>
+            <strong>Nanas Sound</strong> began in 2021 as a passionate music project by Asep Bagja, a software engineer and electronic music enthusiast, in Tallinn, Estonia. Originally, Asep started Nanas Sound to release his own music, which you can now enjoy on
+            <a href="https://music.youtube.com/channel/UC8C4fWKZJvALsC_9I0M5kFg?si=G4kNmx5pyZQO4CTo" 
+               class="text-yellow-600 hover:text-yellow-800" 
+               target="_blank">YouTube Music</a>,
+            <a href="https://www.youtube.com/@bepitulaz" 
+               class="text-yellow-600 hover:text-yellow-800" 
+               target="_blank">YouTube</a>,
+            <a href="https://open.spotify.com/artist/3ZluC2z0z35Pdv8Aky7qMx?si=zXISVL_HRmyMgxuAoYnzeg" 
+               class="text-yellow-600 hover:text-yellow-800" 
+               target="_blank">Spotify</a>, and
+            <a href="https://music.apple.com/ee/artist/asep-bagja/1650464458" 
+               class="text-yellow-600 hover:text-yellow-800" 
+               target="_blank">Apple Music</a>.
+          </p>
 
-        <p>
-          For any inquiries, feel free to reach out to Asep at 
-          <a href="mailto:asep@nanassound.com" 
-             class="text-yellow-600 hover:text-yellow-800">asep@nanassound.com</a>. 
-          Join us on this creative journey and explore the endless possibilities of sound.
-        </p>
+          <p>
+            Driven by a fascination with modular synthesizers, Asep expanded Nanas Sound beyond music production. He began designing and building Eurorack modules, combining his software engineering expertise with hardware development. This unique background allows him to create innovative solutions that bridge the digital and analog worlds.
+          </p>
 
-        <h3 class="text-2xl md:text-3xl font-bold my-10">Team...it's only him for now 🙂</h3>
+          <p>
+            Today, Nanas Sound proudly offers DIY Eurorack modules and professional audio solutions for fellow enthusiasts and creators. From USB-C powered modules to custom audio applications, every product reflects our commitment to quality, innovation, and the open-source community.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5 mt-8 lg:mt-0">
+          <!-- Grid of Images -->
+          <div class="grid grid-cols-12 gap-4 items-center">
+            <div class="col-span-7">
+              <img class="rounded-xl shadow-lg" src="/img/asep-bagja.jpg" alt="Asep Bagja - Founder of Nanas Sound">
+            </div>
+            <div class="col-span-5">
+              <img class="rounded-xl shadow-lg" src="/img/development.jpg" alt="Electronics development and prototyping">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="bg-gray-50 rounded-xl p-8 mb-12">
+        <div class="text-center">
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">Get In Touch</h3>
+          <p class="text-lg text-gray-600 mb-6">
+            For any inquiries, feel free to reach out to Asep at 
+            <a href="mailto:asep@nanassound.com" 
+               class="text-yellow-600 hover:text-yellow-800 font-medium">asep@nanassound.com</a>. 
+            Join us on this creative journey and explore the endless possibilities of sound.
+          </p>
+        </div>
+      </div>
+
+      <!-- Team Section -->
+      <div class="text-center mb-8">
+        <h3 class="text-2xl md:text-3xl font-bold mb-8">Team...it's only him for now 🙂</h3>
         
-        <div class="flex items-start gap-4">
-          <img class="w-20 h-20 rounded-full" src="/img/avatar.jpg" alt="Asep Bagja" />
-          <div>
-            <h5 class="text-2xl md:text-3xl font-bold">Asep Bagja</h5>
-            <p>
-              Chief Everything Officer<br />
-              I do everything from designing, coding, soldering, testing, and shipping.<br />
-              I also do music production and release my music under my name.
-            </p>
+        <div class="bg-white rounded-xl p-8 shadow-lg max-w-2xl mx-auto">
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+            <img class="w-24 h-24 rounded-full shadow-md" src="/img/avatar.jpg" alt="Asep Bagja" />
+            <div class="text-center sm:text-left">
+              <h5 class="text-2xl md:text-3xl font-bold mb-2">Asep Bagja</h5>
+              <p class="text-yellow-600 font-medium mb-3">Chief Everything Officer</p>
+              <p class="text-gray-600">
+                I do everything from designing, coding, soldering, testing, and shipping.<br />
+                I also do music production and release my music under my name.
+              </p>
+            </div>
           </div>
         </div>
       </div>

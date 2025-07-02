@@ -1,0 +1,207 @@
+---
+import "@fontsource/roboto";
+import Layout from "../../layouts/Layout.astro";
+
+const softwareProducts = [
+	{
+		title: "Audio Toolkit",
+		description: "Professional audio processing and analysis tools",
+		image: "/img/development.jpg",
+		category: "VST Plugin",
+		status: "Coming Soon",
+		features: ["Real-time processing", "Multi-format support", "Professional workflow"]
+	},
+	{
+		title: "MIDI Controller Suite",
+		description: "Custom MIDI control applications for live performance",
+		image: "/img/development.jpg",
+		category: "Application",
+		status: "In Development",
+		features: ["Custom mapping", "Live performance", "Hardware integration"]
+	},
+	{
+		title: "Modular Sequencer",
+		description: "Advanced pattern sequencing for Eurorack systems",
+		image: "/img/development.jpg",
+		category: "Hardware Interface",
+		status: "Planning",
+		features: ["Pattern generation", "CV output", "Sync integration"]
+	}
+]
+---
+
+<Layout title="Software Products | Nanas Sound">
+  <!-- Breadcrumb -->
+  <div class="px-4 py-4 sm:px-6 lg:px-8 mx-auto bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <nav class="text-sm text-gray-600">
+        <a href="/" class="hover:text-yellow-600">Home</a> / 
+        <a href="/products" class="hover:text-yellow-600">Products</a> / 
+        <span class="text-gray-900">Software</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="px-4 py-16 sm:px-6 lg:px-8 mx-auto bg-gradient-to-br from-blue-900 via-blue-800 to-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+        Software Solutions
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+        Custom audio applications, VST plugins, and professional music production tools designed for modern workflows.
+      </p>
+    </div>
+  </div>
+
+  <!-- Products Section -->
+  <div class="px-4 py-16 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Software Products
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Professional software solutions for audio production, MIDI control, and music creation.
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {softwareProducts.map((product) => (
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="relative">
+              <img src={product.image} alt={product.title} class="w-full h-48 object-cover">
+              <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                {product.category}
+              </div>
+              <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                {product.status}
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{product.title}</h3>
+              <p class="text-gray-600 mb-4">{product.description}</p>
+              <div class="mb-6">
+                <h4 class="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  {product.features.map((feature) => (
+                    <li class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div class="flex gap-3">
+                <button disabled class="flex-1 py-3 px-4 bg-gray-200 text-gray-500 text-center rounded-lg font-medium cursor-not-allowed">
+                  Coming Soon
+                </button>
+                <a href="/contact" class="py-3 px-4 border border-yellow-400 text-yellow-600 rounded-lg font-medium hover:bg-yellow-400 hover:text-black transition-colors">
+                  Get Notified
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Development Services Section -->
+      <div class="bg-blue-50 rounded-xl p-8 mb-16">
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Custom Software Development</h3>
+          <p class="text-gray-600">Need a specific software solution? I can develop custom applications tailored to your needs.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">VST Plugins</h4>
+            <p class="text-gray-600">Custom audio effects and instruments for your DAW</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">MIDI Applications</h4>
+            <p class="text-gray-600">Custom MIDI controllers and processing software</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Audio Tools</h4>
+            <p class="text-gray-600">Specialized audio processing and analysis applications</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technology Stack -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Technology Stack
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+          Modern development tools and frameworks for reliable, professional software solutions.
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <span class="text-lg font-bold text-gray-700">C++</span>
+            </div>
+            <h4 class="font-medium text-gray-900">Audio Processing</h4>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <span class="text-lg font-bold text-gray-700">JUCE</span>
+            </div>
+            <h4 class="font-medium text-gray-900">Cross-Platform</h4>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <span class="text-lg font-bold text-gray-700">VST3</span>
+            </div>
+            <h4 class="font-medium text-gray-900">Plugin Standard</h4>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <span class="text-lg font-bold text-gray-700">MIDI</span>
+            </div>
+            <h4 class="font-medium text-gray-900">Protocol Support</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="bg-yellow-50 rounded-xl p-8 text-center">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to Build Something Amazing?</h3>
+        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Let's discuss your software needs and create a custom solution that fits your workflow perfectly.
+        </p>
+        <a href="/services" class="inline-flex items-center gap-2 py-3 px-6 bg-yellow-400 text-black rounded-xl font-medium hover:bg-yellow-500 transition-colors">
+          Start Your Project
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout> 

@@ -1,0 +1,151 @@
+---
+import "@fontsource/roboto";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Products | Nanas Sound">
+  <!-- Hero Section -->
+  <div class="px-4 py-16 sm:px-6 lg:px-8 mx-auto bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+        Our Products
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+        Professional audio solutions across hardware, software, and DIY components for musicians and sound designers.
+      </p>
+    </div>
+  </div>
+
+  <!-- Product Categories Section -->
+  <div class="px-4 py-16 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Product Categories
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Explore our range of professional audio products and solutions.
+        </p>
+      </div>
+
+      <!-- Categories Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <!-- Eurorack Modules -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <div class="relative">
+            <img src="/products-img/mini-main.webp" alt="Eurorack Modules" class="w-full h-48 object-cover">
+            <div class="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium">
+              Hardware
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Eurorack Modules</h3>
+            <p class="text-gray-600 mb-6">Professional-grade modular synthesizer components including power supplies, audio processors, and signal splitters.</p>
+            <div class="flex gap-3 mb-4">
+              <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">Mini Power Supply</span>
+              <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">Uksed Audio</span>
+              <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">Rohkem Splitter</span>
+            </div>
+            <a href="/products/eurorack-modules" class="block w-full py-3 px-4 bg-yellow-400 text-black text-center rounded-lg font-medium hover:bg-yellow-500 transition-colors">
+              View Eurorack Products
+            </a>
+          </div>
+        </div>
+
+        <!-- Software -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <div class="relative">
+            <img src="/img/development.jpg" alt="Software Solutions" class="w-full h-48 object-cover">
+            <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+              Software
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Software</h3>
+            <p class="text-gray-600 mb-6">Custom audio applications, VST plugins, MIDI controllers, and music production tools designed for professional workflows.</p>
+            <div class="flex gap-3 mb-4">
+              <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">VST Plugins</span>
+              <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">MIDI Tools</span>
+              <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">Custom Apps</span>
+            </div>
+            <a href="/products/softwares" class="block w-full py-3 px-4 bg-yellow-400 text-black text-center rounded-lg font-medium hover:bg-yellow-500 transition-colors">
+              View Software Products
+            </a>
+          </div>
+        </div>
+
+        <!-- DIY Parts -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <div class="relative">
+            <img src="/products-img/mini-skiff.webp" alt="DIY Parts" class="w-full h-48 object-cover">
+            <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+              DIY
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">DIY Parts</h3>
+            <p class="text-gray-600 mb-6">Eurorack cases, module holders, and custom enclosures. Download STL files for your own 3D printer or order printed parts.</p>
+            <div class="flex gap-3 mb-4">
+              <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">Cases</span>
+              <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">Enclosures</span>
+              <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">Accessories</span>
+            </div>
+            <a href="/products/3d-printed-parts" class="block w-full py-3 px-4 bg-yellow-400 text-black text-center rounded-lg font-medium hover:bg-yellow-500 transition-colors">
+              View DIY Parts
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Products Section -->
+      <div class="bg-yellow-50 rounded-xl p-8 mb-16">
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Featured Products</h3>
+          <p class="text-gray-600">Our most popular items across all categories</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg p-6 shadow-lg text-center">
+            <img src="/products-img/mini-thumbnail.webp" alt="Mini Power Supply" class="w-20 h-20 object-cover rounded-lg mx-auto mb-4">
+            <h4 class="font-bold text-gray-900 mb-2">Mini Power Supply</h4>
+            <p class="text-sm text-gray-600 mb-3">USB-C powered Eurorack supply</p>
+            <a href="/products/eurorack-modules/mini" class="text-yellow-600 hover:text-yellow-700 font-medium text-sm">View Details →</a>
+          </div>
+          
+          <div class="bg-white rounded-lg p-6 shadow-lg text-center">
+            <div class="w-20 h-20 bg-gray-200 rounded-lg mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-2">Audio Tools Suite</h4>
+            <p class="text-sm text-gray-600 mb-3">Professional audio software</p>
+            <a href="/products/softwares" class="text-yellow-600 hover:text-yellow-700 font-medium text-sm">Coming Soon →</a>
+          </div>
+          
+          <div class="bg-white rounded-lg p-6 shadow-lg text-center">
+            <img src="/products-img/mini-skiff.webp" alt="42HP Skiff" class="w-20 h-20 object-cover rounded-lg mx-auto mb-4">
+            <h4 class="font-bold text-gray-900 mb-2">42HP Skiff Case</h4>
+            <p class="text-sm text-gray-600 mb-3">3D printable Eurorack case</p>
+            <a href="/products/3d-printed-parts" class="text-yellow-600 hover:text-yellow-700 font-medium text-sm">Download STL →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="text-center">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Need Something Custom?</h3>
+        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Looking for a specific solution? I offer custom development services for audio applications, hardware design, and specialized music production tools.
+        </p>
+        <a href="/services" class="inline-flex items-center gap-2 py-3 px-6 bg-gray-900 text-white rounded-xl font-medium hover:bg-gray-800 transition-colors">
+          Explore Custom Services
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout> 

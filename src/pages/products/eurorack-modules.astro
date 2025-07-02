@@ -1,0 +1,159 @@
+---
+import "@fontsource/roboto";
+import Layout from "../../layouts/Layout.astro";
+
+const modules = [
+	{
+		title: "Mini",
+		description: "USB-C power supply",
+		image: "/products-img/mini-thumbnail.webp",
+		link: "/products/eurorack-modules/mini",
+		featured: true,
+		price: "€89",
+		status: "In Stock"
+	},
+	{
+		title: "Uksed",
+		description: "4 channel audio input module",
+		image: "/products-img/uksed-main.webp",
+		link: "/products/eurorack-modules/uksed",
+		featured: false,
+		price: "€45",
+		status: "In Stock"
+	},
+	{
+		title: "Rohkem",
+		description: "1x6 and 2x3 passive signal splitter",
+		image: "/products-img/rohkem-main.webp",
+		link: "/products/eurorack-modules/rohkem",
+		featured: false,
+		price: "€25",
+		status: "In Stock"
+	}
+]
+---
+
+<Layout title="Eurorack Modules | Nanas Sound">
+  <!-- Breadcrumb -->
+  <div class="px-4 py-4 sm:px-6 lg:px-8 mx-auto bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <nav class="text-sm text-gray-600">
+        <a href="/" class="hover:text-yellow-600">Home</a> / 
+        <a href="/products" class="hover:text-yellow-600">Products</a> / 
+        <span class="text-gray-900">Eurorack Modules</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="px-4 py-16 sm:px-6 lg:px-8 mx-auto bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+        Eurorack Modules
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+        Professional-grade modular synthesizer components designed for musicians and sound designers.
+      </p>
+    </div>
+  </div>
+
+  <!-- Products Section -->
+  <div class="px-4 py-16 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Available Products
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          High-quality Eurorack modules and accessories, designed and tested for professional use.
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {modules.map((module) => (
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="relative">
+              <img src={module.image} alt={module.title} class="w-full h-48 object-cover">
+              {module.featured && (
+                <div class="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium">
+                  Featured
+                </div>
+              )}
+              <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                {module.status}
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-gray-900">{module.title}</h3>
+                <span class="text-2xl font-bold text-yellow-600">{module.price}</span>
+              </div>
+              <p class="text-gray-600 mb-6">{module.description}</p>
+              <a href={module.link} class="block w-full py-3 px-4 bg-yellow-400 text-black text-center rounded-lg font-medium hover:bg-yellow-500 transition-colors">
+                View Details
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Why Choose Our Products -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Why Choose Our Products?
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+          Professional quality meets innovative design in every module.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Quality Tested</h3>
+            <p class="text-gray-600">Every module undergoes rigorous testing to ensure reliable performance.</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Innovative Design</h3>
+            <p class="text-gray-600">Modern solutions that integrate seamlessly with your existing setup.</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 109.75 9.75A9.75 9.75 0 0012 2.25z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Open Source</h3>
+            <p class="text-gray-600">Schematics and firmware available for customization and learning.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="bg-yellow-50 rounded-xl p-8 text-center">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Need Something Custom?</h3>
+        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Can't find exactly what you're looking for? I specialize in custom Eurorack module development and can create a solution tailored to your specific needs.
+        </p>
+        <a href="/services" class="inline-flex items-center gap-2 py-3 px-6 bg-yellow-400 text-black rounded-xl font-medium hover:bg-yellow-500 transition-colors">
+          Explore Custom Services
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout> 

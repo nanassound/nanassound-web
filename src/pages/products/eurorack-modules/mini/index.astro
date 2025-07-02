@@ -4,62 +4,205 @@ import Layout from "../../../../layouts/Layout.astro";
 import EurorackProductPageNav from "../../../../components/EurorackProductPageNav.astro";
 ---
 
-<Layout title="Mini - USB-C power supply | Nanas Sound">
-  <!-- Hero -->
-  <div class="lg:px-6 pt-4">
+<Layout title="Mini - USB-C Power Supply | Nanas Sound">
+  <!-- Hero Section -->
+  <div class="relative lg:px-6 pt-4">
     <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('/products-img/mini-main.webp')] bg-cover bg-center bg-no-repeat">
-      <div class="mt-auto bg-gradient-to-t from-black/80 via-black/50 to-black/0 ps-5 py-5 md:ps-10 md:py-10">
-        <h1 class="block font-bold text-3xl md:text-5xl text-yellow-400 text-center">Mini</h1>
-        <p class="block text-white text-xl md:text-3xl text-center">
-          USB-C power supply
-        </p>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/0"></div>
+      <div class="relative z-10 mt-auto ps-5 py-5 md:ps-10 md:py-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="block font-bold text-4xl md:text-6xl text-yellow-400 mb-4">Mini</h1>
+          <p class="block text-white text-xl md:text-3xl mb-6">
+            USB-C Power Supply for Eurorack
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://www.elecrow.com/mini-usb-c-power-supply-for-eurorack.html" target="_blank" class="py-3 px-6 bg-yellow-400 text-black rounded-xl font-medium hover:bg-yellow-500 transition-colors">
+              Buy Now - €89
+            </a>
+            <a href="#specifications" class="py-3 px-6 border-2 border-yellow-400 text-yellow-400 rounded-xl font-medium hover:bg-yellow-400 hover:text-black transition-colors">
+              View Specifications
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- End hero -->
 
   <EurorackProductPageNav productName="mini" buyLink="https://www.elecrow.com/mini-usb-c-power-supply-for-eurorack.html" />
 
-  <!-- Content -->
-  <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
-        Power your Eurorack with any USB-C power source
-      </h2>
-
-      <div class="space-y-8">
-        <p class="text-lg md:text-xl">
-          Mini provides +/- 12V and 5V voltage to your Eurorack module. With a 15W USB-C power source, it can deliver up to 416mA. You can utilize a phone charger, the USB-C port on your laptop, or even a power bank to power your Eurorack modular synth system. It is particularly suitable for driving small setups or powering your DIY Eurorack module project.
-        </p>
-
-        <h3 class="text-2xl md:text-3xl font-bold">Utilization of Mini</h3>
-        <div class="space-y-4 text-lg md:text-xl">
-          <p>
-            Mini can be utilized as a standalone desktop module or connected to rails.
+  <!-- Product Overview -->
+  <div class="px-4 py-16 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Power your Eurorack with any USB-C power source
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Mini provides +/- 12V and 5V voltage to your Eurorack modules. With a 15W USB-C power source, it can deliver up to 416mA. Perfect for small setups, DIY projects, or portable modular systems.
           </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <img class="w-full h-auto" src="/products-img/mini-standalone.webp" alt="Mini standalone">
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-gray-700">USB-C powered - use any phone charger or laptop</span>
             </div>
-            <div>
-              <img class="w-full h-auto" src="/products-img/mini-rails.webp" alt="Mini rails">
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-gray-700">Up to 416mA output with 15W power source</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-gray-700">Overcurrent protection with resettable fuse</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-gray-700">Compact 6HP design for space efficiency</span>
             </div>
           </div>
-          <p>
-            Additionally, you can 3D print and construct a small Eurorack case specifically designed for Mini. Learn more about it <a href="https://cults3d.com/en/3d-model/tool/mini-42-hp-eurorack-skiff-with-usb-c-power-supply" target="_blank" class="text-yellow-600 hover:text-yellow-800">here</a>.
-          </p>
-          <img class="w-full h-auto" src="/products-img/mini-case.webp" alt="Mini case">
         </div>
+        <div class="bg-white rounded-xl p-8 shadow-lg">
+          <img src="/products-img/mini-main.webp" alt="Mini Power Supply" class="w-full h-auto rounded-lg mb-6">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-gray-900 mb-2">€89</div>
+            <div class="text-green-600 font-medium mb-4">In Stock</div>
+            <a href="https://www.elecrow.com/mini-usb-c-power-supply-for-eurorack.html" target="_blank" class="block w-full py-3 px-4 bg-yellow-400 text-black text-center rounded-lg font-medium hover:bg-yellow-500 transition-colors">
+              Buy Now
+            </a>
+          </div>
+        </div>
+      </div>
 
-        <h3 class="text-2xl md:text-3xl font-bold">Technical specifications</h3>
-        <ul class="list-disc list-inside space-y-2 text-lg md:text-xl">
-          <li>Width: 6HP</li>
-          <li>Height: 3U</li>
-          <li>Number of power sockets: 4 (16 pins header)</li>
-          <li>Overcurrent protection with resettable fuse</li>
-        </ul>
+      <!-- Usage Options -->
+      <div class="mb-16">
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Multiple Usage Options</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+            <img src="/products-img/mini-standalone.webp" alt="Mini standalone" class="w-full h-48 object-cover rounded-lg mb-4">
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Standalone Desktop</h4>
+            <p class="text-gray-600">Use as a standalone power supply on your desktop for testing and development.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+            <img src="/products-img/mini-rails.webp" alt="Mini rails" class="w-full h-48 object-cover rounded-lg mb-4">
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Mounted to Rails</h4>
+            <p class="text-gray-600">Mount directly to Eurorack rails for integration into existing systems.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+            <img src="/products-img/mini-case.webp" alt="Mini case" class="w-full h-48 object-cover rounded-lg mb-4">
+            <h4 class="text-lg font-bold text-gray-900 mb-2">3D Printed Case</h4>
+            <p class="text-gray-600">Build a custom 42HP case with integrated Mini power supply.</p>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <a href="https://cults3d.com/en/3d-model/tool/mini-42-hp-eurorack-skiff-with-usb-c-power-supply" target="_blank" class="inline-flex items-center gap-2 py-2 px-4 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors">
+            Download 3D Case Files
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Technical Specifications -->
+      <div id="specifications" class="mb-16">
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Technical Specifications</h3>
+        <div class="bg-white rounded-xl p-8 shadow-lg">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="text-lg font-bold text-gray-900 mb-4">Physical Dimensions</h4>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex justify-between">
+                  <span>Width:</span>
+                  <span class="font-medium">6HP</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Height:</span>
+                  <span class="font-medium">3U</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Depth:</span>
+                  <span class="font-medium">25mm</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-gray-900 mb-4">Power Specifications</h4>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex justify-between">
+                  <span>Input:</span>
+                  <span class="font-medium">USB-C (15W)</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Output:</span>
+                  <span class="font-medium">±12V, +5V</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Max Current:</span>
+                  <span class="font-medium">416mA</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Power Sockets:</span>
+                  <span class="font-medium">4 (16-pin header)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-8 border-t border-gray-200">
+            <h4 class="text-lg font-bold text-gray-900 mb-4">Features</h4>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Overcurrent protection with resettable fuse
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Compatible with any USB-C power source
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Ideal for portable and DIY setups
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <div class="bg-yellow-50 rounded-xl p-8 text-center">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Need More Power?</h3>
+        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Looking for a larger power solution or custom Eurorack modules? I can design and build custom solutions tailored to your specific needs.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                      <a href="/products/eurorack-modules" class="py-3 px-6 bg-yellow-400 text-black rounded-xl font-medium hover:bg-yellow-500 transition-colors">
+            View All Products
+          </a>
+          <a href="/services" class="py-3 px-6 border-2 border-yellow-400 text-yellow-600 rounded-xl font-medium hover:bg-yellow-400 hover:text-black transition-colors">
+            Custom Development
+          </a>
+        </div>
       </div>
     </div>
   </div>
-  <!-- End Content -->
 </Layout>
