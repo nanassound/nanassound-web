@@ -1,0 +1,76 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout 
+  title="AirBending Privacy Policy | Nanas Sound" 
+  description="Privacy policy for AirBending macOS app - we don't collect any user data and don't use third-party analytics."
+>
+  <div class="px-4 sm:px-6 lg:px-8 py-14 mx-auto max-w-4xl">
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Privacy Policy
+      </h1>
+      <p class="text-xl text-gray-600">
+        AirBending macOS App
+      </p>
+    </div>
+
+    <!-- Content -->
+    <div class="prose prose-lg max-w-none">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-6">Our Commitment to Your Privacy</h2>
+        
+        <div class="space-y-6 text-gray-700 leading-relaxed">
+          <p class="text-lg">
+            <strong>AirBending</strong> is a macOS application developed by <strong>Nanas Sound OÜ</strong>. 
+            We are committed to protecting your privacy and being transparent about our data practices.
+          </p>
+
+          <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-green-800 mb-3">Data Collection: None</h3>
+            <p class="text-green-700">
+              We do not collect, store, or transmit any personal data or usage information from AirBending users. 
+              The app operates entirely on your local device.
+            </p>
+          </div>
+
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-blue-800 mb-3">Analytics: None</h3>
+            <p class="text-blue-700">
+              We do not use any third-party analytics software or tracking tools in AirBending. 
+              Your usage of the app remains completely private.
+            </p>
+          </div>
+
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">What This Means for You</h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-700">
+              <li>No personal information is collected or shared</li>
+              <li>No usage data is tracked or analyzed</li>
+              <li>No network connections are made for data collection purposes</li>
+              <li>Your privacy is completely protected while using AirBending</li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-200">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Contact Information</h3>
+            <p class="text-gray-700">
+              If you have any questions about this privacy policy, please contact us at:
+            </p>
+            <p class="text-gray-700 mt-2">
+              <strong>Nanas Sound OÜ</strong><br>
+              Website: <a href="https://nanassound.com" class="text-blue-600 hover:text-blue-800 underline">nanassound.com</a><br>
+              Email: <a href="mailto:asep@nanassound.com" class="text-blue-600 hover:text-blue-800 underline">asep@nanassound.com</a>
+            </p>
+          </div>
+
+          <div class="mt-6 text-sm text-gray-500 italic">
+            Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout> 
