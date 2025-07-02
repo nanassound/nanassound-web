@@ -1,0 +1,11 @@
+[variables]
+NODE_VERSION = "22.17.0"
+
+[phases.setup]
+nixPkgs = ["nodejs_22"]
+
+[phases.build]
+cmds = ["npm ci", "npm run build"]
+
+[phases.start]
+cmd = "npm run preview" 
