@@ -7,5 +7,5 @@ nixPkgs = ["nodejs_22"]
 [phases.build]
 cmds = ["npm ci", "npm run build"]
 
-[phases.start]
+[start]
 cmd = "npm run preview" 
