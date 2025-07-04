@@ -1,0 +1,154 @@
+---
+import "@fontsource/roboto";
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout title="AirBending - Gesture-based MIDI Controller | Nanas Sound">
+  <!-- Hero -->
+  <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <!-- Left Column - Text and Buttons -->
+        <div class="space-y-6">
+          <div class="space-y-4">
+            <h1 class="block font-bold text-4xl md:text-5xl lg:text-6xl text-gray-900">
+              AirBending
+            </h1>
+            <p class="block text-gray-600 text-xl md:text-2xl">
+              Gesture-based MIDI Controller
+            </p>
+            <p class="text-lg md:text-xl leading-relaxed text-gray-700">
+              Transform your hand gestures into expressive MIDI control. Using only your Mac's built-in camera and advanced computer vision, it tracks your hand movements in real-time.
+            </p>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-start gap-4">
+            <a class="w-full max-w-xs sm:w-auto hover:opacity-80 transition-opacity focus:outline-none focus:opacity-80" href="https://apps.apple.com/us/app/airbending-midi-controller/id6748079429?mt=12&itscg=30200&itsct=apps_box_link&mttnsubad=6748079429" target="_blank">
+              <img src="/img/mac_app_store_badge.svg" alt="Download on the Mac App Store" class="w-full sm:w-auto h-12 object-contain">
+            </a>
+          </div>
+        </div>
+        
+        <!-- Right Column - Main Image -->
+        <div class="order-first lg:order-last">
+          <img 
+            src="/products-img/airbending-main.webp" 
+            alt="AirBending - Gesture-based MIDI Controller" 
+            class="w-full h-auto rounded-xl"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End hero -->
+
+  <!-- Content -->
+  <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+        Transform your hands into a musical instrument
+      </h2>
+
+      <div class="space-y-8">
+        <div class="bg-yellow-50 p-6 rounded-xl">
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">🎵 Universal MIDI Compatibility</h3>
+          <p class="text-lg md:text-xl leading-relaxed text-gray-700">
+            As a standard MIDI controller, AirBending works seamlessly with any digital audio workstation (DAW) including Logic Pro, Ableton Live, Pro Tools, Cubase, and more. Connect to external hardware synthesizers, software instruments, and effects processors. No special drivers or plugins required—just standard MIDI communication that every music production setup understands.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <h3 class="text-2xl md:text-3xl font-bold">Advanced Preset Manager</h3>
+          <p class="text-lg md:text-xl leading-relaxed text-gray-700">
+            AirBending offers a sophisticated preset system that allows you to customize every aspect of your gesture-to-music mapping. Configure it to use either one hand or both hands for controlling X/Y axis movements, giving you complete flexibility in your musical expression.
+          </p>
+          
+          <div class="space-y-12">
+            <!-- Feature 1: MIDI Channel -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div>
+                <img 
+                  src="/products-img/airbending-preset-midichannel.webp" 
+                  alt="MIDI Channel Assignment" 
+                  class="w-full h-auto rounded-lg"
+                >
+              </div>
+              <div class="space-y-3">
+                <h4 class="text-xl lg:text-2xl font-semibold text-gray-900">MIDI Channel Control</h4>
+                <p class="text-lg text-gray-600">Assign specific MIDI channels for output, allowing you to control multiple hardware or software instruments at once. Perfect for complex studio setups and live performances.</p>
+              </div>
+            </div>
+
+            <!-- Feature 2: Musical Scale -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div class="md:order-last">
+                <img 
+                  src="/products-img/airbending-preset-scale.webp" 
+                  alt="Musical Scale Selection" 
+                  class="w-full h-auto rounded-lg"
+                >
+              </div>
+              <div class="space-y-3">
+                <h4 class="text-xl lg:text-2xl font-semibold text-gray-900">Musical Scale Selection</h4>
+                <p class="text-lg text-gray-600">When using AirBending for pitch control, you can lock your gestures to specific musical scales and keys. This ensures every note you play is perfectly in tune with your composition.</p>
+              </div>
+            </div>
+
+            <!-- Feature 3: CC Assignment -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div>
+                <img 
+                  src="/products-img/airbending-preset-cc.webp" 
+                  alt="CC Number Assignment" 
+                  class="w-full h-auto rounded-lg"
+                >
+              </div>
+              <div class="space-y-3">
+                <h4 class="text-xl lg:text-2xl font-semibold text-gray-900">Custom CC Assignment</h4>
+                <p class="text-lg text-gray-600">Map hand movements to any Control Change (CC) number for precise, expressive control over parameters like filters, effects, volume, and modulation on your favorite synths.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-50 p-6 rounded-xl">
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">See AirBending in Action</h3>
+          <div class="relative h-0" style="padding-bottom: 56.25%;">
+            <iframe
+              class="absolute top-0 left-0 w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/uNpEdxz5QLo?si=Ye0XY4oLaYsWTPPE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="text-2xl md:text-3xl font-bold">Perfect for</h3>
+          <ul class="list-disc list-inside space-y-2 text-lg md:text-xl">
+            <li>Live performances and studio recordings</li>
+            <li>Music education and interactive installations</li>
+            <li>Musicians seeking new forms of expression</li>
+            <li>Anyone wanting to break free from traditional MIDI controllers</li>
+          </ul>
+        </div>
+
+        <div class="text-center pt-8">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a class="inline-block hover:opacity-80 transition-opacity focus:outline-none focus:opacity-80" href="https://apps.apple.com/us/app/airbending-midi-controller/id6748079429?mt=12&itscg=30200&itsct=apps_box_link&mttnsubad=6748079429" target="_blank">
+              <img src="/img/mac_app_store_badge.svg" alt="Download on the Mac App Store" class="h-12">
+            </a>
+            <a class="text-sm text-gray-600 hover:text-gray-800 underline" href="/airbending-privacy-policy">
+              Privacy Policy
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Content -->
+</Layout> 
