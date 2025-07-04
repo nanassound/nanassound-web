@@ -19,6 +19,7 @@ export default defineConfig({
     locales: ["en"],
   },
   redirects: {
-    '/products/softwares/airbending': '/products/software/airbending'
+    '/products/softwares/airbending': '/products/software/airbending',
+    '/eurorack-modules': '/products/eurorack-modules'
   }
 });

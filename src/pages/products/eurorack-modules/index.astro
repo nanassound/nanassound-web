@@ -1,6 +1,6 @@
 ---
 import "@fontsource/roboto";
-import Layout from "../layouts/Layout.astro";
+import Layout from "../../../layouts/Layout.astro";
 
 const modules = [
 	{
@@ -30,16 +30,16 @@ const modules = [
       <h1 class="text-4xl md:text-5xl font-bold text-center my-10">Eurorack Modules</h1>
     </div>
 
-		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-			{modules.map((module) => (
-				<a href={module.link} class="block bg-neutral-50 p-5">
-					<div class="ps-5 py-2 md:ps-10">
-						<span class="block font-bold text-xl md:text-3xl text-dark-800 text-center">{module.title}</span>
-						<span class="block text-dark text-lg md:text-xl text-center">{module.description}</span>
-					</div>
-					<img class="w-full h-auto" src={module.image} alt={module.title}>
-				</a>
-			))}
-		</div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      {modules.map((module) => (
+        <a href={module.link} class="block bg-neutral-50 p-5">
+          <div class="ps-5 py-2 md:ps-10">
+            <span class="block font-bold text-xl md:text-3xl text-dark-800 text-center">{module.title}</span>
+            <span class="block text-dark text-lg md:text-xl text-center">{module.description}</span>
+          </div>
+          <img class="w-full h-auto" src={module.image} alt={module.title}>
+        </a>
+      ))}
+    </div>
   </div>
 </Layout>
