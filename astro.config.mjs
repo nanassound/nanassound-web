@@ -18,4 +18,7 @@ export default defineConfig({
     defaultLocale: "en",
     locales: ["en"],
   },
+  redirects: {
+    '/products/softwares/airbending': '/products/software/airbending'
+  }
 });

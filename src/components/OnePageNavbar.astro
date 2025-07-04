@@ -1,19 +1,37 @@
 ---
 const currentPath = Astro.url.pathname;
 
+// Type definitions for navigation items
+interface NavLink {
+  path: string;
+  label: string;
+  external?: boolean;
+  children?: undefined;
+}
+
+interface NavGroup {
+  label: string;
+  children: NavLink[];
+  path?: undefined;
+  external?: undefined;
+}
+
+type NavItem = NavLink | NavGroup;
+
 // Define your navigation items
-const navItems = [
+const navItems: NavItem[] = [
   { path: '/', label: 'Home' },
-  { path: '/eurorack-modules', label: 'Eurorack modules' },
-  { 
-    path: 'https://cults3d.com/en/users/nanassound/3d-models', 
-    label: '3D printed parts',
-    external: true 
-  },
   {
-    path: 'https://playasynth.com',
-    label: 'Play synths remotely',
-    external: true
+    label: 'Products',
+    children: [
+      { path: '/eurorack-modules', label: 'Eurorack modules' },
+      { path: '/products/software', label: 'Software' },
+      {
+        path: 'https://cults3d.com/en/users/nanassound/3d-models',
+        label: '3D printed parts',
+        external: true
+      }
+    ]
   }
 ];
 
@@ -81,22 +99,42 @@ const isCurrentPage = (path: string) => {
          class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block md:w-auto md:basis-auto md:order-2 md:col-span-6" 
          aria-labelledby="hs-navbar-hcail-collapse">
       <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:justify-center md:items-center md:gap-y-0 md:gap-x-7 md:mt-0">
-        {navItems.map(({ path, label, external }) => (
-          <div>
-            <a 
-              href={path}
-              class:list={[
-                'inline-block text-black focus:outline-none',
-                isCurrentPage(path) 
-                  ? 'relative before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-yellow-400'
-                  : 'hover:text-gray-600 focus:text-gray-600'
-              ]}
-              aria-current={isCurrentPage(path) ? 'page' : undefined}
-              {...external ? { target: '_blank', rel: 'noreferrer noopener' } : {}}
-            >
-              {label}
-            </a>
-          </div>
+        {navItems.map((item) => (
+          item.children ? (
+            <div class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
+              <button type="button" class="flex items-center w-full text-black hover:text-gray-600 font-medium">
+                {item.label}
+                <svg class="flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2 before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5">
+                {item.children.map(child => (
+                  <a
+                    class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                    href={child.path}
+                    {...child.external ? { target: '_blank', rel: 'noreferrer noopener' } : {}}
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div>
+              <a
+                href={item.path}
+                class:list={[
+                  'inline-block text-black focus:outline-none',
+                  isCurrentPage(item.path)
+                    ? 'relative before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-yellow-400'
+                    : 'hover:text-gray-600 focus:text-gray-600'
+                ]}
+                aria-current={isCurrentPage(item.path) ? 'page' : undefined}
+                {...item.external ? { target: '_blank', rel: 'noreferrer noopener' } : {}}
+              >
+                {item.label}
+              </a>
+            </div>
+          )
         ))}
       </div>
     </div>
