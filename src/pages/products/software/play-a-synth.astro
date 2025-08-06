@@ -1,0 +1,116 @@
+---
+import "@fontsource/roboto";
+import Layout from "../../../layouts/Layout.astro";
+
+const title = "Play-A-Synth - Remote Synthesizer Platform | Nanas Sound";
+const description = "Experience the future of synthesizer access with Play-A-Synth, a remote platform that lets you play hardware synthesizers from anywhere in the world. Perfect for B2B whitelabel integration.";
+const image = "/img/social-thumbnail.jpg";
+---
+
+<Layout title={title} description={description} image={image}>
+  <!-- Hero -->
+  <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto bg-blue-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center space-y-6">
+        <div class="space-y-4">
+          <h1 class="block font-bold text-4xl md:text-5xl lg:text-6xl text-gray-900">
+            Play-A-Synth
+          </h1>
+          <p class="block text-gray-600 text-xl md:text-2xl">
+            Remote Synthesizer Platform
+          </p>
+          <p class="text-lg md:text-xl leading-relaxed text-gray-700 max-w-4xl mx-auto">
+            Experience the future of synthesizer access. Play real hardware synthesizers from anywhere in the world through your browser. 
+            Perfect for testing gear before purchasing, accessing rare instruments, or building whitelabel synthesizer experiences for your customers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End hero -->
+
+  <!-- Synthesizer Content -->
+  <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
+    <div class="max-w-6xl mx-auto">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <!-- Iframe Container -->
+        <div class="relative w-full" style="min-height: 600px;">
+          <iframe
+            src="https://playasynth.com/mysynth/90ef7638-3532-4778-ae68-5875fe1330d2"
+            class="w-full h-full absolute top-0 left-0 border-0"
+            style="min-height: 600px;"
+            title="Play-A-Synth Remote Synthesizer Platform"
+            allow="autoplay; microphone; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      
+      <!-- Additional Information -->
+      <div class="mt-10 space-y-8">
+        <div class="text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Remote Hardware Access Revolution
+          </h2>
+          <p class="text-lg md:text-xl leading-relaxed text-gray-700 max-w-4xl mx-auto">
+            Play-A-Synth breaks down geographical barriers, allowing you to play real hardware synthesizers from anywhere in the world. 
+            Using advanced WebRTC technology, experience authentic hardware synthesis with minimal latency through your browser.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-6 rounded-xl">
+            <h3 class="text-xl font-semibold mb-3">🎹 Real Hardware Synthesis</h3>
+            <p class="text-gray-700">
+              Access genuine hardware synthesizers remotely. Experience the authentic sound and character of real analog and digital synthesizers without physical ownership.
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 p-6 rounded-xl">
+            <h3 class="text-xl font-semibold mb-3">🌍 Global Access</h3>
+            <p class="text-gray-700">
+              Play synthesizers located anywhere in the world. Test before you buy, access rare vintage gear, or explore instruments you could never afford to own.
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 p-6 rounded-xl">
+            <h3 class="text-xl font-semibold mb-3">💰 Monetization Platform</h3>
+            <p class="text-gray-700">
+              Synthesizer owners can monetize their hardware collection by sharing access with players globally, creating new revenue streams from existing gear.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-yellow-50 p-6 rounded-xl">
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">🏢 B2B Whitelabel Solutions</h3>
+          <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-4">
+            This demonstration showcases our capability to create custom whitelabel synthesizer experiences for business customers. 
+            Perfect for music education platforms, synthesizer manufacturers, retailers, or any business looking to offer remote hardware access.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div>
+              <h4 class="text-lg font-semibold mb-2">Custom Branding</h4>
+              <p class="text-gray-700">Fully customizable interface with your brand colors, logos, and styling to match your existing platform.</p>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold mb-2">Seamless Integration</h4>
+              <p class="text-gray-700">Easy integration into existing websites and applications through iframe embedding or API integration.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="text-2xl md:text-3xl font-bold">Perfect for</h3>
+          <ul class="list-disc list-inside space-y-2 text-lg md:text-xl">
+            <li>Music education institutions wanting to provide access to expensive hardware</li>
+            <li>Synthesizer manufacturers showcasing their products remotely</li>
+            <li>Music retailers offering "try before you buy" experiences</li>
+            <li>Content creators and influencers demonstrating gear remotely</li>
+            <li>Studios monetizing their hardware collection during downtime</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Content -->
+</Layout>
