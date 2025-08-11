@@ -33,17 +33,20 @@ const image = "/img/social-thumbnail.jpg";
   <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
     <div class="max-w-6xl mx-auto">
       <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-        <!-- Iframe Container -->
-        <div class="relative w-full" style="min-height: 600px;">
-          <iframe
-            src="https://playasynth.com/mysynth/90ef7638-3532-4778-ae68-5875fe1330d2"
-            class="w-full h-full absolute top-0 left-0 border-0"
-            style="min-height: 600px;"
-            title="Play-A-Synth Remote Synthesizer Platform"
-            allow="autoplay; microphone; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
+        <script>
+          async function fetchInstruments() {
+            try {
+              const response = await fetch('https://playasynth.com/organization/test_org_token/instrument/list');
+              const data = await response.json();
+              console.log('Instruments:', data);
+            } catch (error) {
+              console.error('Error fetching instruments:', error);
+            }
+          }
+          
+          fetchInstruments();
+        </script>
+      </div>
       </div>
       
       <!-- Additional Information -->
