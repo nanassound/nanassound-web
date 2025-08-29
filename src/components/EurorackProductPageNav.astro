@@ -1,7 +1,7 @@
 ---
 const { productName, buyLink = null } = Astro.props;
 const basePath = `/products/eurorack-modules/${productName.toLowerCase()}`;
-const currentPath = Astro.url.pathname;
+const currentPath = Astro.url.pathname.replace(/\/$/, '');
 
 const navItems = [
   { path: basePath, label: 'Overview' },
@@ -17,11 +17,11 @@ const navItems = [
         href={path}
         class:list={[
           'py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl border',
-          currentPath === path
+          currentPath === path.replace(/\/$/, '')
             ? 'bg-yellow-400 border-transparent text-black'
             : 'border-yellow-400 hover:bg-yellow-500 text-dark'
         ]}
-        aria-current={currentPath === path ? 'page' : undefined}
+        aria-current={currentPath === path.replace(/\/$/, '') ? 'page' : undefined}
       >
         {label}
       </a>

@@ -2,25 +2,22 @@
 import "@fontsource/roboto";
 import Layout from "../../../../layouts/Layout.astro";
 import EurorackProductPageNav from "../../../../components/EurorackProductPageNav.astro";
-import AttentionBanner from "../../../../components/AttentionBanner.astro";
 ---
 
 <Layout title="The schematic of Uksed | Nanas Sound">
   <!-- Hero -->
   <div class="lg:px-6 pt-4">
-    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('/products-img/uksed-product-page.webp')] bg-cover bg-center bg-no-repeat">
+    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('/products-img/uksed-product-page-1.webp')] bg-cover bg-center bg-no-repeat">
       <div class="mt-auto bg-gradient-to-t from-black/80 via-black/50 to-black/0 ps-5 py-5 md:ps-10 md:py-10">
         <h1 class="block font-bold text-3xl md:text-5xl text-yellow-400 text-center">Uksed</h1>
         <p class="block text-white text-xl md:text-3xl text-center">
-          4 channel audio input module
+          Dual-channel audio input module
         </p>
       </div>
     </div>
   </div>
   <!-- End hero -->
   
-  <AttentionBanner text="We are redesigning the schematic of Uksed. The new version will be available soon." />
-
   <EurorackProductPageNav productName="uksed" />
 
   <!-- Content -->
@@ -44,14 +41,14 @@ import AttentionBanner from "../../../../components/AttentionBanner.astro";
         </p>
 
         <iframe
-          src="/schematics/Uksed.pdf"
+          src="/schematics/Uksed_Schematic.pdf"
           class="w-full h-[610px] border-none"
           title="Uksed schematic PDF"
         />
 
         <p class="text-lg md:text-xl">
           Download the schematic as a PDF file: 
-          <a href="/schematics/Uksed.pdf" 
+          <a href="/schematics/Uksed_Schematic.pdf" 
              target="_blank" 
              rel="noreferrer noopener"
              class="text-yellow-600 hover:text-yellow-800">
