@@ -1,5 +1,5 @@
 ---
-const { productName, buyLink = null } = Astro.props;
+const { productName, buyLink = null, price = null } = Astro.props;
 const basePath = `/products/eurorack-modules/${productName.toLowerCase()}`;
 const currentPath = Astro.url.pathname.replace(/\/$/, '');
 
@@ -34,7 +34,7 @@ const navItems = [
         class="py-2 px-3 mt-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-lime-400 border border-transparent text-black hover:bg-lime-500"
         target="_blank"
       >
-        Buy assembled module
+        {price} Buy assembled module
       </a>
     </nav>
   )}
