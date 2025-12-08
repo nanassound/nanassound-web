@@ -6,33 +6,17 @@ interface NavLink {
   path: string;
   label: string;
   external?: boolean;
-  children?: undefined;
 }
 
-interface NavGroup {
-  label: string;
-  children: NavLink[];
-  path?: undefined;
-  external?: undefined;
-}
-
-type NavItem = NavLink | NavGroup;
+type NavItem = NavLink;
 
 // Define your navigation items
 const navItems: NavItem[] = [
   { path: '/', label: 'Home' },
-  {
-    label: 'Products',
-    children: [
-      { path: '/products/eurorack-modules', label: 'Eurorack modules' },
-      { path: '/products/software', label: 'Software' },
-      {
-        path: 'https://cults3d.com/en/users/nanassound/3d-models',
-        label: '3D printed parts',
-        external: true
-      }
-    ]
-  },
+  { path: '/products/eurorack-modules', label: 'Eurorack' },
+  { path: '/products/software', label: 'Software' },
+  { path: 'https://cults3d.com/en/users/nanassound/3d-models', label: '3D Print', external: true },
+  { path: '/products/midimesh', label: 'midiMESH' },
   { path: '/services', label: 'Services' }
 ];
 
@@ -77,7 +61,7 @@ const isCurrentPage = (path: string) => {
          rel="noreferrer noopener" 
          class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl border border-transparent bg-yellow-400 text-black hover:bg-yellow-500 focus:outline-none focus:bg-yellow-500 transition disabled:opacity-50 disabled:pointer-events-none">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg>
-        Shop
+        Shop on Reverb
       </a>
 
       <div class="md:hidden">
@@ -96,46 +80,29 @@ const isCurrentPage = (path: string) => {
     <!-- End Button Group -->
 
     <!-- Collapse -->
-    <div id="hs-navbar-hcail" 
-         class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block md:w-auto md:basis-auto md:order-2 md:col-span-6" 
+    <div id="hs-navbar-hcail"
+         class="hs-collapse hidden transition-all duration-300 basis-full grow md:block md:w-auto md:basis-auto md:order-2 md:col-span-6 md:overflow-visible"
          aria-labelledby="hs-navbar-hcail-collapse">
       <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:justify-center md:items-center md:gap-y-0 md:gap-x-7 md:mt-0">
         {navItems.map((item) => (
-          item.children ? (
-            <div class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
-              <button type="button" class="flex items-center w-full text-black hover:text-gray-600 font-medium">
-                {item.label}
-                <svg class="flex-shrink-0 ms-2 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-              </button>
-              <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2 before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5">
-                {item.children.map(child => (
-                  <a
-                    class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
-                    href={child.path}
-                    {...child.external ? { target: '_blank', rel: 'noreferrer noopener' } : {}}
-                  >
-                    {child.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div>
-              <a
-                href={item.path}
-                class:list={[
-                  'inline-block text-black focus:outline-none',
-                  isCurrentPage(item.path)
-                    ? 'relative before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-yellow-400'
-                    : 'hover:text-gray-600 focus:text-gray-600'
-                ]}
-                aria-current={isCurrentPage(item.path) ? 'page' : undefined}
-                {...item.external ? { target: '_blank', rel: 'noreferrer noopener' } : {}}
-              >
-                {item.label}
-              </a>
-            </div>
-          )
+          <div class={item.label === 'midiMESH' ? 'relative' : ''}>
+            <a
+              href={item.path}
+              class:list={[
+                item.label === 'midiMESH' ? 'relative inline-block text-black focus:outline-none' : 'inline-block text-black focus:outline-none',
+                isCurrentPage(item.path)
+                  ? 'relative before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-yellow-400'
+                  : 'hover:text-gray-600 focus:text-gray-600'
+              ]}
+              aria-current={isCurrentPage(item.path) ? 'page' : undefined}
+              {...item.external ? { target: '_blank', rel: 'noreferrer noopener' } : {}}
+            >
+              {item.label}
+              {item.label === 'midiMESH' && (
+                <span class="absolute -top-1 -right-2 z-10 inline-flex items-center justify-center w-3 h-3 text-[8px] font-bold text-white bg-red-500 rounded-full">!</span>
+              )}
+            </a>
+          </div>
         ))}
       </div>
     </div>
